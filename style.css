@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+}
+main{
+    width:50%;
+}
+aside{
+    width:50%;
+}
+.signup{
+    display:none;
+}
