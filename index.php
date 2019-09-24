@@ -19,10 +19,10 @@
                 <form action="" method="">
                     <!--<h1>Sign up</h1>-->
                     <label class="form-label" for="email">Email:</label>
-                    <p><input class="form-input" id="email" name="email" type="email" placeholder="example@xyz.com" required /></p>
+                    <p><input class="form-input" id="email" name="email" type="email" placeholder=" example@xyz.com" required /></p>
                     <!--                input 1-->
                     <label for="password">Password:</label>
-                    <p><input id="password" name="password" type="password" placeholder="minimum of 8 characters" pattern=".{8,}" required /></p>
+                    <p><input id="password" name="password" type="password" pattern=".{8,}" required /></p>
                     <!--                input 1-->
                     <input type="submit" value="Login">
                     <p class="message"> Don't have an account? <a href="#" id="show_register">sign up here</a></p>
@@ -30,29 +30,29 @@
             </section>
             <section class="signup">
                 <h1>Sign up to get Started</h1>
-                <button id="teacher_signin">Sign in as a Teacher</button>
+                <button id="teacher_signin">Sign in as a Teacher</button><br>
                 <form action="" method="">
                     <!--<h1>Sign up</h1>-->
                     <!--                input 1-->
                     <label for="firstname">First Name</label>
-                    <p><input id="firstname" name="firstname" type="text" placeholder="First Name" required /></p>
+                    <p><input id="firstname" name="firstname" type="text" placeholder=" firstname" required /></p>
                     <!--                input 1-->
                     <label for="lastname">Last Name:</label>
-                    <p><input id="lastname" name="lastname" type="text" placeholder="lastname" required /></p>
+                    <p><input id="lastname" name="lastname" type="text" placeholder=" lastname" required /></p>
                     <!--                input 1-->
                     <label for="email">Email:</label>
-                    <p><input id="email" name="email" type="email" placeholder="example@xyz.com" required /></p>
+                    <p><input id="email" name="email" type="email" placeholder=" example@xyz.com" required /></p>
                     <!--                input 1-->
-                    <label for="gender"></label>Gender:
-                    <input type="radio" name="gender" value="male" checked> Male
-                    <input type="radio" name="gender" value="female">Female
+                    <label for="gender"> Gender: &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="male" checked> Male &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="female"> Female &nbsp; </label>
                     <!--                input 1-->
-                    <!--                input 1-->
+                    <!--                input 1--><br><br>
                     <label for="password">Password:</label>
-                    <p><input id="password" name="password" type="password" placeholder="minimum of 8 characters" pattern=".{8,}" required /></p>
+                    <p><input id="password" name="password" type="password" placeholder=" minimum of 8 characters" pattern=".{8,}" required /></p>
                     <!--                input 1-->
                     <label for="confirm_password">Confirm Password:</label>
-                    <p><input id="confirm_password" name="confirm_password" type="password" placeholder="minimum of 8 characters" pattern=".{8,}" required /></p>
+                    <p><input id="confirm_password" name="confirm_password" type="password" placeholder=" minimum of 8 characters" pattern=".{8,}" required /></p>
                     <!--                input 1-->
                     <input type="submit" value="Create Account">
                     <p class="message">Already have an account? <a href="#" id="show_login">Log in</a></p>

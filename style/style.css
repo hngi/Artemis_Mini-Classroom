@@ -49,21 +49,25 @@ aside {
 #teacher_signin {
     background-color: #053575;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 25px;
     width: 8.3em;
     padding: 1%;
     display: block;
     margin: auto;
+    outline:none;
+    cursor:pointer;
 }
 
 #student_signin {
     background-color: #053575;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 25px;
     width: 8.3em;
     padding: 1%;
     display: block;
     margin: auto;
+    outline:none;
+    cursor:pointer;
 }
 
 .student h1 {
@@ -89,20 +93,32 @@ aside {
 }
 
 .logon input[type=submit] {
-    width: 40%;
+    width: 282px;
+    height: 60px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 30px;
     line-height: 2em;
     background-color: #053575;
     color: white;
     font-size: 18px;
     align-self: center;
+    margin: 50px 0 0 75px;
+    outline: none;
+    cursor: pointer;
 }
 
 .message {
     text-align: center;
+    font-weight: bold;
 }
 
+#show_register {
+    text-decoration: none;
+}
+
+#show_login {
+    text-decoration :none;
+}
 .slogan {
     margin: auto !important;
     text-align: center;
