@@ -1,0 +1,42 @@
+/*body{*/
+/*    background: url("https://res.cloudinary.com/upperli/image/upload/v1569341668/404_tranrq.png") center no-repeat;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+body, html{
+    font-family: 'Itim', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+.bg{
+       background: url("https://res.cloudinary.com/upperli/image/upload/v1569341668/404_tranrq.png") center no-repeat;
+    height: 100%;
+    background-size: cover;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.number{
+    font-weight: bold;
+    color: #225981;
+    font-size: 170px;
+}
+.looks{
+    font-size: 18px;
+    color: black;
+    margin-top: 20%;
+}
+.err-button{
+    margin-top: 40%;
+}
+.error{
+    background: #225981;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    padding: 15px 15px;
+}
