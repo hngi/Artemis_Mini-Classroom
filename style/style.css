@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    background: #A01B5C;
+    box-shadow: 30px 30px 90px rgba(0, 0, 0, 0.25), inset 30px 30px 90px rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -35,9 +37,10 @@ aside {
 [type=password],
 [type=text] {
     width: 100%;
-    border: 2px solid #DBD9D9;
-    border-radius: 3px;
+    border: 2px solid #DBD9D9;;
+    border-radius: 20px;
     line-height: 2.6em;
+    background: #A01B5C;
 }
 
 .logon label {
@@ -47,9 +50,9 @@ aside {
 }
 
 #teacher_signin {
-    background-color: #053575;
+    background: rgba(255, 255, 255, 0.4);
     color: #ffffff;
-    border-radius: 25px;
+    border-radius: 20px;
     width: 8.3em;
     padding: 1%;
     display: block;
@@ -72,7 +75,8 @@ aside {
 
 .student h1 {
     font-size: 1.75em;
-    color: #053575;
+    font-family: Imprima;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -93,16 +97,16 @@ aside {
 }
 
 .logon input[type=submit] {
-    width: 282px;
-    height: 60px;
+    width: 134px;
+    height: 44px;
     text-align: center;
-    border-radius: 30px;
     line-height: 2em;
-    background-color: #053575;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;    
     color: white;
     font-size: 18px;
     align-self: center;
-    margin: 50px 0 0 75px;
+    margin: 50px 0 0 120px;
     outline: none;
     cursor: pointer;
 }
@@ -110,14 +114,17 @@ aside {
 .message {
     text-align: center;
     font-weight: bold;
+    color:#ffffff;
 }
 
 #show_register {
     text-decoration: none;
+    color:red;
 }
 
 #show_login {
     text-decoration :none;
+    color: red;
 }
 .slogan {
     margin: auto !important;
