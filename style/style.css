@@ -6,6 +6,9 @@
 }
 main{
     width:50%;
+    display: flex;
+    flex-direction: column;
+    
 }
 aside{
     width:50%;
