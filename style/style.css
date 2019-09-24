@@ -1,21 +1,131 @@
-.container{
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
     display: flex;
     height: 100%;
     width: 100%;
     padding: 40px;
 }
-main{
-    width:50%;
+
+main {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    
 }
-aside{
-    width:50%;
+
+aside {
+    width: 50%;
 }
-.signup{
-    display:none;
-}
-.teacher{
+
+.signup {
     display: none;
+}
+
+.teacher {
+    display: none;
+}
+
+
+/* Form Styling */
+
+.logon input[type=email],
+[type=password],
+[type=text] {
+    width: 100%;
+    border: 2px solid #DBD9D9;
+    border-radius: 3px;
+    line-height: 2.6em;
+}
+
+.logon label {
+    color: #000000;
+    font-size: 1.125em;
+    margin-bottom: -100px;
+}
+
+#teacher_signin {
+    background-color: #053575;
+    color: #ffffff;
+    border-radius: 25px;
+    width: 8.3em;
+    padding: 1%;
+    display: block;
+    margin: auto;
+    outline:none;
+    cursor:pointer;
+}
+
+#student_signin {
+    background-color: #053575;
+    color: #ffffff;
+    border-radius: 25px;
+    width: 8.3em;
+    padding: 1%;
+    display: block;
+    margin: auto;
+    outline:none;
+    cursor:pointer;
+}
+
+.student h1 {
+    font-size: 1.75em;
+    color: #053575;
+    text-align: center;
+}
+
+.login form {
+    width: 70%;
+    margin: auto;
+}
+
+.teacher h1 {
+    font-size: 1.75em;
+    color: #053575;
+    text-align: center;
+}
+
+.signup form {
+    width: 70%;
+    margin: auto;
+}
+
+.logon input[type=submit] {
+    width: 282px;
+    height: 60px;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 2em;
+    background-color: #053575;
+    color: white;
+    font-size: 18px;
+    align-self: center;
+    margin: 50px 0 0 75px;
+    outline: none;
+    cursor: pointer;
+}
+
+.message {
+    text-align: center;
+    font-weight: bold;
+}
+
+#show_register {
+    text-decoration: none;
+}
+
+#show_login {
+    text-decoration :none;
+}
+.slogan {
+    margin: auto !important;
+    text-align: center;
+}
+
+aside {
+    background: linear-gradient(0deg, rgba(5, 53, 117, 0.4), rgba(5, 53, 117, 0.4)), url("https://res.cloudinary.com/jameschima/image/upload/v1569319310/photo-1565598621680-94ac0c22b148_lr4he5.jpg");
+    height: 100vh;
+    z-index: -2;
 }
