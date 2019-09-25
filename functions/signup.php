@@ -4,11 +4,31 @@
    include('connection.php');
         
     $con = connect();
-    
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-	$email = $_POST['email'];
-	$password = $_POST["password"];
+
+    $firstName = "";
+    $lastName = "";
+    $email = "";
+    $password = "";
+    $role = "";
+
+
+    if(preg_match("/^([a-zA-Z' ]+)$/",$_POST['firstName'])){
+        $firstName = $_POST['firstName'];
+	}
+	if(preg_match("/^([a-zA-Z' ]+)$/",$_POST['lastName'])){
+        $lastName = $_POST['lastName'];
+	}
+
+	function valid_email($email) {
+    	return !!filter_var($email, FILTER_VALIDATE_EMAIL);
+	}
+	if(valid_email($_POST['email'])){
+        $email = $_POST['email'];
+	}
+	if(count($_POST['password'])>7){
+        $password = $_POST["password"];
+	}
+	
 	$role = $_POST['role'];
 
 	$harshedPassword = sha1($password); // encrypt password
