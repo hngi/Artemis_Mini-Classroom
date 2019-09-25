@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569387265/team%20artemis/Artemis_logo2_dp6b6u.png" sizes="16x16" type="image/png">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style/teachers-dashboard.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/942fa82be2.js"></script>
 </head>
 
@@ -19,25 +21,26 @@
                 <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569396996/Artemis_wh3le6.svg" id="logo" alt="logo">
 
             </div>
-            <div class="username right-float">
-                <h4>Username <br>Welcome to your dashboard! </h4>
+            <div id="username">
+                <h4>Welcome <br>Username </h4>
 
             </div>
 
-            <div class="profile-pic right-float">
+            <div class="profile-pic">
 
                 <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1568767225/Team%20Heroes%20Log%20In/Vector_x5kb7p.png">
 
             </div>
 
+
         </div>
         <div class="menunav">
 
             <div class="menu-button">
-                <a href="#"> DASHBOARD</a>
+                <a href="teachers-dashboard.html"> DASHBOARD</a>
             </div>
             <div class="menu-button">
-                <a href="#"> COURSES</a>
+                <a href="#"> CLASSES</a>
             </div>
             <div class="menu-button">
                 <a href="#"> PROJECTS</a>
@@ -45,20 +48,6 @@
             <div class="menu-button">
                 <a href="#"> MESSAGES</a>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
 
     </div>
@@ -75,20 +64,20 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" alt="">
+                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
 
 
                         </td>
 
 
                         <td>
-                            <h4>CLASS NAME</h4>
+                            <h5>CLASS NAME</h5>
                             <p>0 courses Available</p>
 
 
                         </td>
-                        <td>
-                            <i class="fa fa-edit right-float"></i>
+                        <td style="padding-left:14%">
+                            <a href="#"> <i class="fa fa-edit fa-lg edit"></i></a>
 
                         </td>
                     </tr>
@@ -112,27 +101,29 @@
             <div class="students-header">
 
                 <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397785/team%20artemis/Students_2_i5xq84.svg" class="icons" alt="class">
+                <div class="content-header">
+                    <h4>STUDENTS</h4>
+
+                </div>
+
             </div>
             <div class="content">
                 <table>
                     <tr>
                         <td>
-                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" alt="">
+                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
 
 
                         </td>
 
 
-                        <td>
-                            <h4>CLASS NAME</h4>
-                            <p>0 courses Available</p>
+                        <td class="center">
+                            <h5>CLASS NAME</h5>
+                            <p>0 students Enrolled</p>
 
 
                         </td>
-                        <td>
-                            <i class="fa fa-edit"></i>
 
-                        </td>
                     </tr>
                 </table>
 
@@ -146,26 +137,32 @@
         </div>
         <div class="assignment">
             <div class="assignment-header">
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_1_kam9x2.svg" class="icons" alt="class">
+                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_1_kam9x2.svg" class="icons small" alt="class">
+                <div class="content-header">
+                    <h4>ASSIGNMENT</h4>
+
+                </div>
+
             </div>
             <div class="content">
                 <table>
                     <tr>
                         <td>
-                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" alt="">
+                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
 
 
                         </td>
 
 
                         <td>
-                            <h4>CLASS NAME</h4>
-                            <p>0 courses Available</p>
+                            <h5>CLASS NAME</h5>
+                            <p>0 assignments </p>
 
 
                         </td>
-                        <td>
-                            <i class="fa fa-edit"></i>
+                        <td style="padding-left:15%">
+                            <a href="#"><i class="fa fa-upload fa-lg edit" aria-hidden="true"></i></a>
+
 
                         </td>
                     </tr>
@@ -177,22 +174,26 @@
         </div>
         <div class="c-class">
             <div class="c-class-header">
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_s6rnnd.png" class="icons" alt="class">
+                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_s6rnnd.png" class="icons small" alt="class">
                 <div class="content-header">
-                    <h4> Create Class</h4>
+                    <h4> CREATE CLASS</h4>
                 </div>
             </div>
-            <div class="box-content">
+            <div class="content">
                 <!--<h1>Create Class Form</h1>-->
                 <p>
 
                     Adding Content to a site has never been this easy and rewarding, click on the button below to create a class!
 
                 </p>
+                <div class="center">
+                    <a href="createclass.html"> <button>
+                                Create Class
+                           </button></a>
 
-                <button>
-                    Create Class
-                </button>
+                </div>
+
+
 
 
 

@@ -97,21 +97,21 @@ main {
 }
 
 #logo {
-    width: 100%;
-    padding-left: 100%;
-    padding-top: 100%;
-    clear: both;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 80px;
+    top: 34px;
 }
 
 .profile-pic {
-    display: block;
-    width: 30%;
-    margin-top: 4%;
+    position: absolute;
     width: 104px;
     height: 104px;
-    background-color: white;
+    left: 1146px;
+    top: 61px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
-    margin-right: 5%;
 }
 
 .right-float {
@@ -120,6 +120,14 @@ main {
 
 .profile-pic img {
     width: 100%;
+}
+
+.small {
+    width: 15% !important;
+}
+
+.medium {
+    width: 50% !important;
 }
 
 .icons {
@@ -133,7 +141,18 @@ main {
     text-align: center;
 }
 
-.menu-button {
+.menu-dropdown {
+    position: absolute;
+    width: 39px;
+    height: 26.15px;
+    left: 1244px;
+    top: 98px;
+    background: linear-gradient(90deg, #603996 50%, #357BBC 100%);
+    border-radius: 0px 30px 30px 0px;
+}
+
+.menu-button a {
+    padding: 10px;
     width: 151px;
     height: 34px;
     text-align: center;
@@ -142,7 +161,15 @@ main {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
 }
 
-.menu-button:active {
+.center {
+    margin: auto;
+}
+
+.menu-button a:active {
+    background: #603996;
+}
+
+.menu-button a:hover {
     background: #603996;
 }
 
@@ -155,55 +182,157 @@ a {
     text-align: center;
 }
 
-.box-content {
-    padding: 10%;
+.content {
+    padding: 10px;
+}
+
+.content h5 {
+    margin-bottom: -16px;
+    font-size: 16px;
+    color: #000;
+}
+
+.content p {
+    font-size: 14px;
+    color: #000;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.edit {
+    color: #000000;
+}
+
+#edit-profile {
+    position: absolute;
+    width: 142px;
+    height: 35px;
+    left: 1129px;
+    top: 175px;
+    background: #603996;
+    border-radius: 20px;
+}
+
+#username {
+    position: absolute;
+    width: 161px;
+    height: 21px;
+    left: 980px;
+    top: 83px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        display: block;
+        width: 100%;
+    }
+    .profile-pic {
+        margin: auto;
+        display: block;
+    }
 }
 
 
 /*create Class Form */
 
-.content .form-input input [type=text] {
-    width: 100%;
-    border: 2px solid #DBD9D9;
-    border-radius: 20px;
-    line-height: 2.6em;
-    background: #57489D !important;
-    outline: none;
-    color: white !important;
-    padding-left: 20px;
-}
-
-textarea {
-    border-radius: 20px;
-    border: 2px solid #DBD9D9;
-    background: #ffffff !important;
-}
-
 .form-container {
     display: flex;
     flex-direction: column;
     width: 90%;
+    padding-bottom: 10px;
 }
 
 #c-class-form {
-    margin: 10% auto;
+    margin: 5% auto;
     background: #E5E5E5;
     display: flex;
     flex-direction: column;
     width: 70%;
-    border: 3px solid red;
+    padding-bottom: 20px
 }
 
 .c-class-form-header {
     width: 100%;
     height: 126px;
-    padding: 10%;
+    padding: 5% 10% 10% 5%;
     /* Blue 1 */
     background: #357BBC;
 }
 
-.classes h4 {
-    margin-bottom: -16px;
-    font-size: 16px;
-    color: 3
+.c-class-form-header img {
+    width: 70px;
+    float: left;
+}
+
+[form] {
+    width: 60%;
+    margin: auto;
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 15px;
+    box-shadow: 5px 5px #00000029;
+}
+
+.content-header h3 {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding-top: 2px;
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: none;
+    width: 80%;
+    background: transparent;
+    border-bottom: 1px solid #DBD9D9;
+    margin-bottom: 3px;
+    overflow: hidden;
+    line-height: 30px;
+    margin: 10px auto;
+}
+
+textarea {
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: none;
+    width: 80%;
+    background: transparent;
+    border-bottom: 1px solid #DBD9D9;
+    ;
+    overflow: hidden;
+    height: 70px;
+    margin: 10px auto;
+}
+
+input[type="submit"] {
+    margin: 20px auto;
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: none;
+    width: 80%;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 12px;
+    border-radius: 20px;
+    background: #357BBC;
 }
