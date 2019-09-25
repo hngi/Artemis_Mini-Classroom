@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.mainnav {
+    display: flex;
+    width: 100%;
+    height: 111px;
+    background: linear-gradient(90deg, #603996 50%, #357BBC 100%);
+}
+
+.menunav {
+    display: flex;
+    width: 100%;
+    height: 34px;
+    background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
+    padding-left: 10%;
+}
+
+footer {
+    display: flex;
+    width: 1440px;
+    height: 10px;
+    background: #57489D;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    align-items: center;
+    grid-gap: 50px;
+    width: 90%;
+    align-items: center;
+    margin: 10% auto;
+}
+
+.classes {
+    grid-column: 1;
+    height: 614px;
+    background: #E5E5E5;
+}
+
+.students {
+    grid-column: 2;
+    height: 614px;
+    background: #E5E5E5;
+}
+
+.assignment {
+    grid-column: 3;
+    height: 614px;
+    background: #E5E5E5;
+}
+
+.c-class {
+    grid-column: 4;
+    height: 614px;
+    background: #E5E5E5;
+}
+
+.class-header {
+    width: 100%;
+    height: 126px;
+    /* Blue 1 */
+    background: #2F80ED;
+    margin: 0;
+    padding: 10%;
+}
+
+.students-header {
+    width: 100%;
+    height: 126px;
+    padding: 10%;
+    /* Blue 1 */
+    background: #9B51E0;
+}
+
+.assignment-header {
+    width: 100%;
+    height: 126px;
+    padding: 10%;
+    /* Blue 1 */
+    background: #6FCF97;
+}
+
+.c-class-header {
+    width: 100%;
+    height: 126px;
+    padding: 10%;
+    /* Blue 1 */
+    background: #357BBC;
+}
+
+#logo {
+    width: 100%;
+    padding-left: 100%;
+    padding-top: 100%;
+    clear: both;
+}
+
+.profile-pic {
+    display: block;
+    width: 30%;
+    margin-top: 4%;
+    width: 104px;
+    height: 104px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+
+.right-float {
+    float: right !important;
+}
+
+.profile-pic img {
+    width: 100%;
+}
+
+.icons {
+    margin: auto;
+    width: 25%;
+    display: block;
+}
+
+.username {
+    margin: auto;
+    text-align: center;
+}
+
+.menu-button {
+    width: 151px;
+    height: 34px;
+    text-align: center;
+    color: white;
+    background: #9a7cc5;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+
+.menu-button:active {
+    background: #603996;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.content-header {
+    text-align: center;
+}
+
+.box-content {
+    padding: 10%;
+}
+
+
+/*create Class Form */
+
+.content .form-input input [type=text] {
+    width: 100%;
+    border: 2px solid #DBD9D9;
+    border-radius: 20px;
+    line-height: 2.6em;
+    background: #57489D !important;
+    outline: none;
+    color: white !important;
+    padding-left: 20px;
+}
+
+textarea {
+    border-radius: 20px;
+    border: 2px solid #DBD9D9;
+    background: #ffffff !important;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+#c-class-form {
+    margin: 10% auto;
+    background: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: 3px solid red;
+}
+
+.c-class-form-header {
+    width: 100%;
+    height: 126px;
+    padding: 10%;
+    /* Blue 1 */
+    background: #357BBC;
+}
+
+.classes h4 {
+    margin-bottom: -16px;
+    font-size: 16px;
+    color: 3
+}
