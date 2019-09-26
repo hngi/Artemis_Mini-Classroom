@@ -136,6 +136,7 @@ span img{
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     color: rgba(0, 0, 0, 0.479);
+    background: #fff;
   }
   .sidenav a:active {
       background: #fff;
