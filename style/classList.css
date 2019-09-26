@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 body{
+    z-index: 0;
     margin: 0;
     padding: 0;
 }
@@ -98,7 +99,7 @@ video{
 
 
 /* Dropdown Buttons */
-#dropbutton{
+.dropbtn{
     outline: none;
     margin-left: 50px;
     margin-bottom: 30px;
@@ -114,7 +115,7 @@ video{
      rgba(0, 0, 0, 0.25);
     border-radius: 34px;
 }
-.dropbtn{
+.dropbtn_duration, .dropbtn_participant{
     outline: none;
     display: flex;
     margin-top: 10px;
@@ -133,31 +134,30 @@ video{
     overflow: hidden;
 }
   /* Dropdown button on hover & focus */
-  .dropbtn1:hover, .dropbtn1:focus {
-    background-color: #2980B9;
+  .dropbtn:hover {
+    background-color: rgba(185, 41, 142, 0.589);
   }
-  .dropbtn:hover, .dropbtn:focus {
+  .dropbtn_duration:hover, .dropbtn_participant:hover {
     background-color: rgba(0, 0, 0, 0.219);
   }
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
-    position: relative;
     display: inline-block;
   }
   
   /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+  .dropdown-content, .participant_dropdown-content, .duration_dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000;
+    z-index: 1;
   }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
+  .dropdown-content a, .participant_dropdown-content a, .duration_dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -165,7 +165,7 @@ video{
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
+  .dropdown-content a:hover, .participant_dropdown-content a:hover, .duration_dropdown-content a:hover{background-color: #ddd}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
