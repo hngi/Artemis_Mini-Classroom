@@ -7,6 +7,12 @@ body {
     color: white;
 }
 
+/*.container{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}*/
 .mainnav {
     display: flex;
     width: 100%;
@@ -14,13 +20,13 @@ body {
     background: linear-gradient(90deg, #603996 50%, #357BBC 100%);
 }
 
-.menunav {
+/*.menunav {
     display: flex;
     width: 100%;
     height: 34px;
-    background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
+    background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9% !important);
     padding-left: 10%;
-}
+}*/
 
 footer {
     display: flex;
@@ -228,7 +234,15 @@ a {
     color: #FFFFFF;
 }
 
+/*Media Queries */
+
 @media only screen and (max-width: 768px) {
+    container{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden; 
+    }
     main {
         display: block;
         width: 100%;
@@ -237,7 +251,17 @@ a {
         margin: auto;
         display: block;
     }
+
+    .menunav{
+        flex-direction: column;
+        width: 100%;
+        }
+    .icons{
+        width: 5% !important;
+        margin:auto;
+    }
 }
+
 
 
 /*create Class Form */
