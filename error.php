@@ -18,8 +18,13 @@
         <p>let's find you</p>
     </div>
     <div class="err-button">
-        <button class="error">Back Home</button>
+        <button class="error" onclick="home()">Back Home</button>
     </div>
+    <script>
+        function home() {
+            window.location.href = "dashboard.php";
+        }
+    </script>
 
 </div>
 </div>
