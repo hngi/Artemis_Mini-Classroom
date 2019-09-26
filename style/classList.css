@@ -85,7 +85,7 @@ video{
 aside{
     width: 25%;
     height: 100%;
-    min-height: inherit;
+    min-height: 100vh;
     background: #E5E3E3;
     padding: 50px 0 10px 0; 
    
