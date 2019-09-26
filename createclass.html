@@ -14,46 +14,52 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="mainnav">
-            <div>
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569396996/Artemis_wh3le6.svg" id="logo" alt="logo">
-
-            </div>
-            <div id="username">
-                <h4>Welcome <br>Username </h4>
-
+    <div class="header">
+        <header class="dash-header">
+            <div class="dash-logo">
+                <a href=""><img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569396996/Artemis_wh3le6.svg"></a>
             </div>
 
-            <div class="profile-pic">
+            <div class="dash-profile">
+                <span class="name">
+                                     <div id="username">
+                                
+                                                          <p>Welcome</p>
+                                                          <h1><?php echo $_SESSION["fullname"]; ?> </h1>
+                                                        </span>
+                <span class="image-container">
+                                                          <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1568767225/Team%20Heroes%20Log%20In/Vector_x5kb7p.png" id="image">
+                                                           <div class="drop-down">
+                                                              <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569485655/team%20artemis/arrow_ltdhmt.png" id="arrow">
+                                                              <ul id="nav-menu">
+                                                                <li><a href="#">Home</a></li>
+                                                                <li><a href="">Profile</a></li>
+                                                                <li><a href="logout.php">Logout</a></li>
+                                                              </ul>  
+                                                           </div>
+                                                           
+                                                        </span>
+            </div>
+        </header>
 
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1568767225/Team%20Heroes%20Log%20In/Vector_x5kb7p.png">
+        <div class="extra-bg">
+            <div class="topnav" id="myTopnav">
+                <a href="teachers-dashboard.html">Dashboard</a>
+                <a href="#">Class</a>
+                <a href="#">Assignment</a>
 
+                <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
 
 
-        </div>
-        <div class="menunav">
 
-            <div class="menu-button">
-                <a href="teachers-dashboard.html"> DASHBOARD</a>
-            </div>
-            <div class="menu-button">
-                <a href="#"> CLASSES</a>
-            </div>
-            <div class="menu-button">
-                <a href="#"> PROJECTS</a>
-            </div>
-            <div class="menu-button">
-                <a href="#"> MESSAGES</a>
-            </div>
+
         </div>
 
     </div>
     <div class="form-container">
-
-
-
         <div id="c-class-form">
             <div class="c-class-form-header">
                 <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_s6rnnd.png" class="icons" alt="class">
@@ -76,8 +82,9 @@
     </div>
 
     <footer>
-
     </footer>
+    <script src="js/header.js"></script>
+
 
 </body>
 
