@@ -1,0 +1,86 @@
+.body-content{
+	padding-top: 75px;
+}
+.body-content .pp{
+	width:181px;
+	height: 181px;
+}
+.bio ul{
+	width: 49%;
+    margin: 31px auto;
+}
+.bio ul li{
+	list-style: none;
+	font-size: 22px;
+	color:#57489D;
+	line-height: 65px;
+	display: flex;
+	justify-content: space-between;
+}
+.bio ul li .type{
+	font-weight: bold;
+	width: 49%;
+}
+.bio ul li .key{
+	width:49%;
+	text-align: left;
+}
+.sidebar-item {
+	font-size: 27px;
+}
+
+label{
+	width: 100%;
+	margin: 15px;
+}
+label:last-child{
+	text-align: center;
+}
+
+div.img{
+	width: 100%;
+	text-align: center;
+}
+
+input{
+	border: 2px solid #C4C4C4;
+}
+
+.edit-button {
+	background: linear-gradient(180deg, #603996 0%, #357BBC 100%);
+	color: white;
+	width: 139px;
+	height: 49px;
+	border-radius: 10px;
+	border: 0px;
+}
+@media only screen and (max-width:785px){
+	.body-content{
+		padding-left: 41px;
+		padding-left: 41px;
+	}
+	.bio ul{
+		width: 85%;
+	    margin: 31px auto;
+	}
+}
+@media only screen and (max-width:381px){
+	.body-content{
+		padding-left: 41px;
+		padding-left: 41px;
+	}
+	.bio ul{
+		width: 99%;
+	    margin: 31px auto;
+	}
+	.bio ul li{
+		font-size: 18px;
+	}
+.b
+	.bio ul li .type{
+		width: 41%;
+	}
+	.bio ul li .key{
+		width:59%;
+	}
+}
