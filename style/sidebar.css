@@ -1,0 +1,195 @@
+body,*{
+	margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:555;
+
+}
+.dash-header{
+	background: linear-gradient(90deg, #A01B5C 50%, #357BBC 100%);
+	color:#fff;
+	padding:34px 81px;
+	position: relative;
+
+}
+.dash-header .dash-logo{
+	padding-right: 11px;
+}
+.dash-header .dash-profile .name{
+	padding-top: 9px;
+}
+
+.dash-header .dash-profile{
+	display: flex;
+	text-align: right;
+	position: absolute;
+	right:95px;
+	top:45px;
+}
+
+.dash-header .dash-profile p{
+	font-size:16px;
+	margin-bottom:1px;
+}
+.dash-header .dash-profile h1{
+	font-size:22px;
+	text-transform: uppercase;
+}
+.dash-header .dash-profile #image{
+	border-radius: 50%;
+	width:118px;
+	height:118px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	z-index:9;
+}
+.dash-header .dash-profile .image-container{
+	display: flex;
+
+}
+.dash-header .dash-profile .drop-down{
+	padding-top:41px;
+}
+.dash-header .dash-profile #arrow{
+	float: left;
+	margin-left: -7px;
+}
+.dash-header .dash-profile ul{
+	padding:11px;
+	background:#357BBC;
+	border-radius:11px;
+	margin-left: -15px;
+	margin-top:25px;
+	display: none;
+	position:absolute;
+	z-index: 5;
+}
+.dash-header .dash-profile ul li{
+	list-style: none;
+	text-align: left;
+	padding-bottom: 25px;
+}
+.dash-header .dash-profile ul li a{
+	color:white;
+	text-decoration: none;
+}
+.extra-bg{
+	background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
+	height:31px;
+}
+.extra-bg #mb-nav-icon{
+	display: none;
+}
+.side-bar{
+	background: #E5E3E3;
+	width:255px;
+	height:calc(100vh - 141px);
+	position:fixed;
+	top:141px;
+	padding-top:131px;
+}
+.side-bar .menu{
+	padding:25px 0;
+	background: white;
+	display: flex;
+	justify-content: center
+}
+.body{
+	background: white;
+	min-height:height:calc(100vh - 141px);
+	padding-top:141px;
+	padding-left:255px;
+}
+.body-content{
+	padding:145px 84px 45px 84px;
+}
+/*------------------------------------MOBILE=--------------------------------- MOBILE------------*/
+@media only screen and (max-width:615px){
+	.dash-header{
+		padding:19px 15px;
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+
+	}
+	.dash-header .dash-profile{
+		display: flex;
+		position: relative;
+		right:0px;
+		top:0px;
+		width: 63%;
+	}
+
+	.dash-header .dash-profile p{
+		font-size:14px;
+	}
+	.dash-header .dash-profile h1{
+		font-size:16px;
+	}
+	.dash-header .dash-profile #image{
+		width:68px;
+		height:68px;
+	}
+	/*.dash-header .dash-profile .image-container{
+		display: flex;
+	}*/
+	.dash-header .dash-profile .drop-down{
+		padding-top:19px;
+	}
+	/*.dash-header .dash-profile #arrow{
+		float: left;
+		margin-left: -7px;
+	}*/
+	/*.extra-bg{
+		background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
+		height:31px;
+	}*/
+	.dash-header .dash-logo{
+		padding-right: 11px;
+	}
+	.extra-bg{
+		position: relative;
+	}
+	.side-bar{
+		background: #E5E3E3;
+		width:0px;
+		height:calc(100vh - 141px);
+		overflow:hidden;
+		position:fixed;
+		top:145px;
+		padding-top:51px;
+		transition: all ease .3s;
+		z-index:95;
+	}
+	.extra-bg #mb-nav-icon{
+		display:block;
+		position: absolute;
+		top:8px;
+		left:15px;
+		color:white;
+		font-size:18px;
+	}
+	.side-bar .menu{
+		padding:21px 0;
+	}
+	.body{
+		min-height:height:calc(100vh - 141px);
+		padding-left:1px;
+	}
+	.body-content{
+		padding:45px 34px 45px 34px;
+	}
+
+
+}
+
+@media only screen and (max-width:341px){
+	.side-bar{
+		top:145px;
+	}
+}

@@ -18,7 +18,7 @@
         <p>let's find you</p>
     </div>
     <div class="err-button">
-        <button class="error">Back Home</button>
+        <a href="index.php"><button class="error">Back Home</button></a>
     </div>
 
 </div>
