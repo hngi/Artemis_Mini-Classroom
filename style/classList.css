@@ -16,7 +16,7 @@ body {
 }
 
 .dash-header {
-    background: linear-gradient(90deg, #A01B5C 50%, #357BBC 100%);
+    background: linear-gradient(90deg, #603996 50%, #357BBC 100%);
     color: #fff;
     padding: 34px 81px;
     position: relative;
@@ -245,15 +245,14 @@ body {
         color: white;
         font-size: 18px;
     }
-    .wrapper .videos{
+    .wrapper .videos {
         margin-left: 25px;
-
     }
     .side-bar .menu {
         padding: 21px 0;
     }
     .body {
-        min-height: height: calc(100vh - 141px);
+        min-height: calc(100vh - 141px);
         padding-left: 1px;
     }
 }
@@ -289,7 +288,6 @@ footer {
 section {
     width: 75%;
     height: 100vh;
-    ;
     min-height: 100vh;
     padding: 50px 10px;
     margin: 0 auto;
@@ -299,7 +297,8 @@ section {
     display: flex;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
-    box-shadow: 5px 5px 5px 5px #00000029;
+    box-shadow: 4px 4px 4px 4px #C4C4C4;
+    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -358,10 +357,10 @@ video {
 }
 
 .enroll_btn button {
-    padding: 15px;
-    border-radius: 15px;
-    background: linear-gradient(180deg, #5E3C98 0%, #4464AF 100%);
-    border: 3px solid #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    background: #2F80ED;
+    border: 3px solid #2F80ED;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     color: #fff;
 }
@@ -382,14 +381,14 @@ video {
 
 #dropbutton {
     outline: none;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 30px;
     background: blue;
     color: white;
-    padding: 15px 50px;
+    padding: 15px 25px;
     cursor: pointer;
-    background: #818BC2;
-    border: 3px solid #F5E4E4;
+    background: #2F80ED;
+    border: 1px solid #ffffff;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 34px;
@@ -406,7 +405,7 @@ video {
 }
 
 [option-nav] {
-    background: rgba(196, 196, 196, 0.2);
+    background: #E5E3E3;
     padding: 0 70px 0 40px;
     margin-bottom: 15px;
     box-sizing: border-box;

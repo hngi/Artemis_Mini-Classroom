@@ -93,12 +93,12 @@ if($totalEnrolments > 1) {
                                echo ' 
                                 <tr>
                                     <td>
-                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
+                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569688231/icons8-class-80_gtqaya.png" class="medium" alt="">
                                     </td>
                                     <td>
                                         <h4>'.$recentRow["class_name"].'</h4>
                                     </td>
-                                    <td style="padding-left:14%">
+                                    <td style="padding-left:20%">
                                         <a href="teacher_add_item.php?class_id='.$recentRow["class_id"].' "> 
                                             <i class="fa fa-edit fa-lg edit"></i>
                                         </a>
@@ -148,12 +148,12 @@ if($totalEnrolments > 1) {
                                echo ' 
                                 <tr>
                                     <td>
-                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
+                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569688080/icons8-students-64_mfnany.png" class="medium" alt="">
                                     </td>
                                     <td>
                                         <h4>'.$recentRow["class_name"].'</h4>
                                     </td>
-                                    <td style="padding-left:14%">
+                                    <td style="padding-left:35%">
                                         <h4>'.$studentsCount.'</h4>
                                     </td>
                                 </tr>';
