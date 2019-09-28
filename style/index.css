@@ -104,11 +104,18 @@ header .nav ul li a:hover{
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     padding:6px 20px;
+    margin: 0 6px 6px 0;
     text-decoration: none;
+    transition: all 0.2s;
 
 }
+@media all and (max-width:480px){
+  .welcome-banner-content .w-btn{
+  display:block;
+  margin:5px auto;
+ }
 
-/*-----------   TABLET----------------------- TABLET--- TABLET--*/
+ /*-----------   TABLET----------------------- TABLET--- TABLET--*/
 @media only screen and (max-width:768px){
     .welcome-header{
         padding-top:50px;
@@ -170,10 +177,10 @@ header .nav ul li a:hover{
         line-height: 32px;
         margin-bottom: 45px;
     }
-    .welcome-banner-content .w-btn{
+    /*.welcome-banner-content .w-btn{
         font-size: 20px;
         padding:15px 25px;
-    } 
+    }*/
 }
 
 /*--------------------------------- MOBILE-------------------- MOBILE ------------*/
@@ -236,8 +243,8 @@ header .nav ul li a:hover{
         line-height: 25px;
         margin-bottom: 25px;
     }
-    .welcome-banner-content .w-btn{
+    /*.welcome-banner-content .w-btn{
         font-size: 16px;
         padding:10px 22px;
-    } 
+    }*/
 }
