@@ -28,7 +28,7 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Class List</title>
     <link rel="icon" href="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569387265/team%20artemis/Artemis_logo2_dp6b6u.png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="style/classList.css">
+    
     <link rel="stylesheet" href="style/student-dashboard.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
@@ -46,20 +46,27 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
     
     <?php include('fragments/students_header.php'); ?>
     
-    <div class="wrapper" style="border: none !important;">
+    <div class="wrapper" >
         
         <div class="db-box">
-            <h5>CURRENTLY ENROLLED IN</h5>
-            <p><?php echo $enrolledCount; ?> CLASS<?php echo $addS; ?></p>
+        
+            <div class="class-header">
+                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_e8xcik.svg" class="icons" alt="class">
+                <div class="center-text">
+                    <h4>ENROLLED CLASSES</h4>
+                </div>
+            </div>
+            <h5 class="center-text">CURRENTLY ENROLLED IN</h5>
+            <p class="center-text"><?php echo $enrolledCount; ?> CLASS<?php echo $addS; ?></p>
             <?php
                 // check if user has enrolled classes
                 if($enrolledCount > 0) {
                     echo '<a href="students_enrolments.php">
-                    <button style="padding: 10px; fong-size: 28px;">View Enrolled classes</button>
+                    <button  class="enroll_btn">View Enrolled classes</button>
                     </a>';
                 } else {
                     echo '<a href="students_class_list.php">
-                    <button style="padding: 10px; fong-size: 28px;">Enroll In a Class Now</button>
+                    <button  class="enroll_btn">Enroll In a Class Now</button>
                     </a>';
                 }
             ?>
@@ -67,8 +74,14 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
         </div>
         
         <div class="db-box">
-            <h5>ASSIGNMENTS</h5>
-            <p>PENDING</p>
+        <div class="class-header">
+        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_e8xcik.svg" class="icons" alt="class">
+                <div class="center-text">
+                    <h4>Assignments</h4>
+                </div>
+            </div>
+            <h5 class="center-text">Check Back on Friday </h5>
+            <p class="center-text"><em>Assignments are posted every friday </em></p>
         </div>
 
     </div>
