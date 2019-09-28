@@ -315,6 +315,10 @@ button:not(#backBtn) {
         margin-top: -16px;
         padding: 20px;
     }
+    #signLink {
+        color: white;
+        font-size: 16px !important;
+    }
 }
 
 

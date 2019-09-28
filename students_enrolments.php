@@ -49,7 +49,7 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
                 </div>-->
             </div>
             <div option-nav>
-                <h4 style="float: left;">My Enrolments</h4>
+                <h4 style="float: left;">My Enrollments</h4>
                 <!--<div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">durartion</button>
                     <div id="myDropdown2" class="dropdown-content">
@@ -139,6 +139,10 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
             
         </section>
     </div>
+    <div></div>
+    <footer>
+
+    </footer>
     <script src="js/classList.js"></script>
     <script src="js/header.js"></script>
 </body>

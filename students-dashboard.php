@@ -85,6 +85,10 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
         </div>
 
     </div>
+
+    <footer>
+        
+    </footer>
     
    <!-- <div id="main">
         <section>

@@ -58,7 +58,7 @@ $con = connect();
                                 echo '
                                 <a href="upload_class_picture.php?class_id='.$row["class_id"].'">
                                 <img src="class_pics/'.$row["class_id"].'.jpg" width="200px" height="150px">
-                                <button style="padding: 5px; margin: 5px; ">Change Class Thumbnail</button>
+                                <button class ="thumbnail_btn">Change Picture</button>
                                 </a>';
                             }
                             
@@ -85,9 +85,20 @@ $con = connect();
                     echo '<h4>You have not created any class</h4>';
                 }
             ?>
-            
+           
+             
         </section>
+        
+      
     </div>
+    <div class="space">
+        
+        </div>
+    
+    
+    <footer>
+
+    </footer>
     <script src="js/classList.js"></script>
     <script src="js/header.js"></script>
 </body>

@@ -93,7 +93,7 @@ if($totalEnrolments > 1) {
                                echo ' 
                                 <tr>
                                     <td>
-                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569688231/icons8-class-80_gtqaya.png" class="medium" alt="">
+                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569704826/icons8-class-80_1_jozusq.png" class="medium" alt="">
                                     </td>
                                     <td>
                                         <h4>'.$recentRow["class_name"].'</h4>
@@ -148,7 +148,7 @@ if($totalEnrolments > 1) {
                                echo ' 
                                 <tr>
                                     <td>
-                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569688080/icons8-students-64_mfnany.png" class="medium" alt="">
+                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569705144/icons8-students-64_1_e0xmna.png" class="medium" alt="">
                                     </td>
                                     <td>
                                         <h4>'.$recentRow["class_name"].'</h4>
@@ -223,6 +223,7 @@ if($totalEnrolments > 1) {
         </div>
 
         <footer>
+            
         </footer>
         <script src="js/header.js"></script>
 

@@ -17,7 +17,7 @@ body {
 }
 
 .dash-header {
-    background: linear-gradient(90deg, #A01B5C 50%, #357BBC 100%);
+    background: #603996;
     color: #fff;
     padding: 34px 81px;
     position: relative;
@@ -40,8 +40,9 @@ body {
 }
 
 .dash-header .dash-profile p {
+    color: white;
     font-size: 16px;
-    margin-bottom: 1px;
+    margin-bottom: -14px;
 }
 
 .dash-header .dash-profile h1 {
@@ -93,7 +94,7 @@ body {
 }
 
 .extra-bg {
-    background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
+    background: #8467AE;
     height: 32px;
 }
 
@@ -125,6 +126,7 @@ body {
 
 .topnav {
     overflow: hidden;
+    margin-left: 60px;
 }
 
 .topnav a {
@@ -133,10 +135,12 @@ body {
     color: #f2f2f2;
     text-align: center;
     padding: 0px 0px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     padding: 5px 10px;
+    text-transform: uppercase;
+    border: 1px inset #8467AE;
 }
 
 .topnav a:hover {
@@ -156,11 +160,16 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .topnav {
+        overflow: hidden;
+        margin-left: 0px;
+    }
     .topnav a {
         display: none;
     }
     .topnav a.icon {
         display: block;
+        border: none !important;
     }
 }
 
@@ -178,6 +187,7 @@ body {
         float: none;
         display: block;
         text-align: left;
+        border: none !important;
     }
 }
 
@@ -268,6 +278,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 10px;
 }
 
 
@@ -314,8 +325,7 @@ footer {
 .class-header {
     width: 100%;
     height: 126px;
-    /* Blue 1 */
-    background: #2F80ED;
+    background: #603996;
     margin: 0;
     padding: 10%;
 }
@@ -345,8 +355,8 @@ footer {
 .enroll_btn {
     padding: 10px;
     border-radius: 10px;
-    background: #2F80ED;
-    border: 3px solid #2F80ED;
+    background: #603996;
+    border: 3px solid #603996;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     color: #fff;
     margin-left: 28%;

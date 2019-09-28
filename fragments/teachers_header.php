@@ -29,6 +29,7 @@
                 <a href="teachers-dashboard.php">Dashboard</a>
                 <a href="teacher_classes.php">My Classes</a>
                 <a href="logout.php">Logout</a>
+                <a href="">&nbsp</a>
 
                 <a href="javascript:void(0);" class="icon" onclick="showMenu()">
                     <i class="fa fa-bars"></i>

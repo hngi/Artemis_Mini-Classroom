@@ -32,6 +32,8 @@
                 <a href="students_enrolments.php">My Classes</a>
                 <a href="students_class_list.php">Class List</a>
                 <a href="logout.php">Logout</a>
+                <a href="">&nbsp</a>
+                
 
 
                 <a href="javascript:void(0);" class="icon" onclick="showMenu()">
