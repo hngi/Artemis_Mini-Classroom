@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" href="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569387265/team%20artemis/Artemis_logo2_dp6b6u.png" sizes="16x16" type="image/png">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style/teachers-dashboard.css">
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+   <div class = "container-fluid overflow-hidden">
     <div class="navbar">
         <div class="mainnav">
             <div>
@@ -28,13 +30,19 @@
 
             <div class="profile-pic">
 
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1568767225/Team%20Heroes%20Log%20In/Vector_x5kb7p.png">
+                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1568767225/Team%20Heroes%20Log%20In/Vector_x5kb7p.png" class="img-responsive">
 
             </div>
-
-
         </div>
-        <div class="menunav">
+            
+                <nav class="nav flex-column flex-sm-row" style="height:34px; background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%); width: 100%;">
+                    <a class="flex-sm-fill text-sm-center nav-link active" href="teachers-dashboard.html">DASHBOARD</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">CLASSES</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">PROJECTS</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">MESSAGES</a>
+                </nav>
+
+       <!--<div class="menunav">
 
             <div class="menu-button">
                 <a href="teachers-dashboard.html"> DASHBOARD</a>
@@ -48,7 +56,7 @@
             <div class="menu-button">
                 <a href="#"> MESSAGES</a>
             </div>
-        </div>
+        </div>-->
 
     </div>
     <main>
@@ -71,7 +79,7 @@
 
 
                         <td>
-                            <h5>CLASS NAME</h5>
+                            <h5>CLASS NAME</h5><br>
                             <p>0 courses Available</p>
 
 
@@ -118,7 +126,7 @@
 
 
                         <td class="center">
-                            <h5>CLASS NAME</h5>
+                            <h5>CLASS NAME</h5><br>
                             <p>0 students Enrolled</p>
 
 
@@ -137,7 +145,7 @@
         </div>
         <div class="assignment">
             <div class="assignment-header">
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_1_kam9x2.svg" class="icons small" alt="class">
+                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_1_kam9x2.svg" class="icons small" alt="class" >
                 <div class="content-header">
                     <h4>ASSIGNMENT</h4>
 
@@ -155,7 +163,7 @@
 
 
                         <td>
-                            <h5>CLASS NAME</h5>
+                            <h5>CLASS NAME</h5><br>
                             <p>0 assignments </p>
 
 
@@ -207,7 +215,9 @@
     <footer>
 
     </footer>
-
+  </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
