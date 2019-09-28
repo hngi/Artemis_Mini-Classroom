@@ -40,11 +40,13 @@ aside {
 }
 
 .student {
-    background-color: #A01B5C;
+    /* background-color: #A01B5C; */
+    background-color: #57489D;
 }
 
 .student .inner-container {
-    background: #A01B5C;
+    /* background: #A01B5C; */
+    background-color: #57489D;
     box-shadow: 30px 30px 90px rgba(0, 0, 0, 0.25), inset 30px 30px 90px rgba(0, 0, 0, 0.25);
     display: flex;
     width: 90%;
@@ -92,7 +94,8 @@ form a {
 
 .teacher input[type=email],
 .teacher input[type=password],
-.teacher input [type=text] {
+.teacher input [type=text],
+.teacher select {
     width: 100%;
     border: 2px solid #DBD9D9;
     border-radius: 20px;
@@ -105,12 +108,14 @@ form a {
 
 .student input[type=email],
 .student input[type=password],
-.student input[type=text] {
+.student input[type=text],
+.student select{
     width: 100%;
     border: 2px solid #DBD9D9;
     border-radius: 20px;
     line-height: 2.6em;
-    background: #A01B5C;
+    /* background: #A01B5C; */
+    background-color: #57489D;
     outline: none;
     color: white !important;
     padding-left: 20px;
@@ -154,8 +159,8 @@ form a {
     margin: auto;
 }
 
-.logon input[type=submit] {
-    width: 130px;
+.logon input[type=submit], button {
+    width: 170px;
     height: 40px;
     text-align: center;
     line-height: 2em;
@@ -285,3 +290,19 @@ form a {
         padding: 20px;
     }
 }
+
+
+/* validation styles */
+.errorMsg {
+    color: #DE9D8F !important;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+button[type="button"]:disabled {
+    cursor: not-allowed;
+}
+
+/* .disabled {
+    cursor: not-allowed;
+} */
