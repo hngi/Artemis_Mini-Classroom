@@ -158,8 +158,29 @@ form a {
     width: 90%;
     margin: auto;
 }
+#backBtn{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 2em;
+    background: transparent;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+    display: block;
+}
 
-.logon input[type=submit], button {
+#signLink{
+    color: #E41300;
+}
+#signLink:hover {
+    color: white;
+}
+
+.logon input[type=submit], button:not(#backBtn) {
     width: 170px;
     height: 40px;
     text-align: center;

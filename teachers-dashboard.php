@@ -1,3 +1,48 @@
+<?php
+session_start();
+include('functions/connection.php');
+$con = connect();
+
+if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
+    header('Location:signin.php?role=student');
+}
+
+// get teacher classes
+$classQuery = 'SELECT * FROM classes WHERE teacher_id = '.$_SESSION["userId"].'';
+$classResult = mysqli_query($con, $classQuery);
+$classCount = mysqli_affected_rows($con);
+if($classCount > 1) {
+    $addS = "ES";
+} else {
+    $addS = " ";
+}
+
+// get students enrolled in classes
+$totalEnrolments = 0;
+if($classCount > 0) {
+    while($classRow = mysqli_fetch_assoc($classResult)) {
+        $countEnrolmentsQuery = 'SELECT * FROM enrolment WHERE class_id = '.$classRow["class_id"].'';
+        $countEnrolmentsResult = mysqli_query($con,$countEnrolmentsQuery);
+        $countEnrolments = mysqli_affected_rows($con);
+        if($countEnrolments > 0) {
+            // students exists
+            while($enrolmentsRows = mysqli_fetch_assoc($countEnrolmentsResult)) {
+                $totalEnrolments++;
+            }
+        } else {
+            // no student exist
+        }
+    }
+}
+
+if($totalEnrolments > 1) {
+    $addS2 = "S";
+} else {
+    $addS2 = " ";
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,35 +57,62 @@
     <link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/942fa82be2.js"></script>
-
+    <style>
+        h4{
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
-<?php include('teacher-header.php'); ?>
-
+    
+    <?php include('fragments/teachers_header.php'); ?>
+    
     <div class="wrapper">
         <div class="db-box">
             <div class="class-header">
                 <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_e8xcik.svg" class="icons" alt="class">
                 <div class="content-header">
-                    <h4>CLASSES</h4>
+                    <h4>YOUR RECENT CLASSES</h4>
                 </div>
             </div>
             <div class="content">
                 <table>
-                    <tr>
-                        <td>
-                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
-                        </td>
-                        <td>
-                            <h5>CLASS NAME</h5>
-                            <p>0 courses Available</p>
-                        </td>
-                        <td style="padding-left:14%">
-                            <a href="#"> <i class="fa fa-edit fa-lg edit"></i></a>
-
-                        </td>
-                    </tr>
+                    <!--<tr>-->
+                    <!--    <td colspan="3">Your Recent Classes</td>-->
+                    <!--</tr>-->
+                    <?php
+                        // get recent classes
+                        $recentQuery = 'SELECT * FROM classes WHERE teacher_id = '.$_SESSION["userId"].' ORDER BY class_id DESC LIMIT 4';
+                        $recentResult = mysqli_query($con,$recentQuery);
+                        $recentCount = mysqli_affected_rows($con);
+                        if($recentCount > 0) {
+                            // classes exist
+                            while ($recentRow = mysqli_fetch_assoc($recentResult)) {
+                                // get students per class
+                               echo ' 
+                                <tr>
+                                    <td>
+                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
+                                    </td>
+                                    <td>
+                                        <h4>'.$recentRow["class_name"].'</h4>
+                                    </td>
+                                    <td style="padding-left:14%">
+                                        <a href="teacher_add_item.php?class_id='.$recentRow["class_id"].' "> 
+                                            <i class="fa fa-edit fa-lg edit"></i>
+                                        </a>
+                                    </td>
+                                </tr>';
+                                
+                            }
+                        } else {
+                            // classes do not exist
+                        }
+                    ?>
+                    
+                    
+                    
                 </table>
             </div>
 
@@ -49,63 +121,84 @@
             <div class="students-header">
                 <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397785/team%20artemis/Students_2_i5xq84.svg" class="icons" alt="class">
                 <div class="content-header">
-                    <h4>STUDENTS</h4>
+                    <h4>YOUR STUDENTS ( <?php echo $totalEnrolments; ?> )</h4>
                 </div>
             </div>
             <div class="content">
                 <table>
-                    <tr>
-                        <td>
-                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
-                        </td>
-                        <td class="center">
-                            <h5>CLASS NAME</h5>
-                            <p>0 students Enrolled</p>
-
-                        </td>
-                    </tr>
+                    <!--<tr>-->
+                    <!--    <td colspan="3">Your Recent Classes</td>-->
+                    <!--</tr>-->
+                    <?php
+                        // get recent classes
+                        $recentQuery = 'SELECT * FROM classes WHERE teacher_id = '.$_SESSION["userId"].' ORDER BY class_id DESC LIMIT 4';
+                        $recentResult = mysqli_query($con,$recentQuery);
+                        $recentCount = mysqli_affected_rows($con);
+                        if($recentCount > 0) {
+                            // classes exist
+                            while ($recentRow = mysqli_fetch_assoc($recentResult)) {
+                                // get students count
+                              $studentsCount = 0;
+                              $studentsQuery = 'SELECT * FROM enrolment WHERE class_id = '.$recentRow["class_id"].'';
+                              $studentsResult = mysqli_query($con, $studentsQuery);
+                              while($studentsRow = mysqli_fetch_assoc($studentsResult)) {
+                                $studentsCount++;
+                              }
+                              
+                               echo ' 
+                                <tr>
+                                    <td>
+                                        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
+                                    </td>
+                                    <td>
+                                        <h4>'.$recentRow["class_name"].'</h4>
+                                    </td>
+                                    <td style="padding-left:14%">
+                                        <h4>'.$studentsCount.'</h4>
+                                    </td>
+                                </tr>';
+                                
+                            }
+                        } else {
+                            // classes do not exist
+                        }
+                    ?>
+                    
+                    
+                    
                 </table>
             </div>
         </div>
 
-        <div class="db-box ">
+        <!--<div class="db-box ">-->
 
-            <div class="assignment-header">
-                <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_e8xcik.svg" class="icons" alt="class">
-                <div class="content-header">
-                    <h4>ASSIGNMENT</h4>
-                </div>
-            </div>
-            <div class="content">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">
-
-
-                        </td>
-
-
-                        <td>
-                            <h5>CLASS NAME</h5>
-                            <p>0 assignments </p>
-
-
-                        </td>
-                        <td style="padding-left:25%">
-                            <a href="#"><i class="fa fa-upload fa-lg edit" aria-hidden="true"></i></a>
+        <!--    <div class="assignment-header">-->
+        <!--        <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569397784/team%20artemis/Layer_x0020_1_e8xcik.svg" class="icons" alt="class">-->
+        <!--        <div class="content-header">-->
+        <!--            <h4>ASSIGNMENT</h4>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <div class="content">-->
+        <!--        <table>-->
+        <!--            <tr>-->
+        <!--                <td>-->
+        <!--                    <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569420810/team%20artemis/Ellipse_2_etowzs.png" class="medium" alt="">-->
+        <!--                </td>-->
+                        
+        <!--                <td>-->
+        <!--                    <h5>CLASS NAME</h5>-->
+        <!--                    <p>0 assignments </p>-->
+        <!--                </td>-->
+        <!--                <td style="padding-left:25%">-->
+        <!--                    <a href="#"><i class="fa fa-upload fa-lg edit" aria-hidden="true"></i></a>-->
+        <!--                </td>-->
+        <!--            </tr>-->
+        <!--        </table>-->
 
 
-                        </td>
-                    </tr>
-                </table>
+        <!--    </div>-->
 
-
-            </div>
-
-
-
-        </div>
+        <!--</div>-->
         <div class="db-box">
 
             <div class="c-class-header">
@@ -123,7 +216,7 @@
                 </p>
 
                 <div class="create-btn">
-                    <button><a href="createclass.html">Create CLass</a></button>
+                    <button><a href="createclass.php">Create Class</a></button>
 
                 </div>
             </div>

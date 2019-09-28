@@ -94,7 +94,7 @@ body {
 
 .extra-bg {
     background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
-    height: 34px;
+    height: 32px;
 }
 
 .extra-bg #mb-nav-icon {
@@ -260,7 +260,7 @@ body {
         top: 145px;
     }
     .wrapper {
-        margin-bottom: 0px;
+
     }
 }
 

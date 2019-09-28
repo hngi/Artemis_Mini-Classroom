@@ -7,6 +7,8 @@ body {
     color: white;
     width: 100vw;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -56,6 +58,9 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 9;
 }
+.image-container{
+
+}
 
 .dash-header .dash-profile .image-container {
     display: flex;
@@ -94,7 +99,7 @@ body {
 
 .extra-bg {
     background: linear-gradient(90deg, rgba(96, 57, 150, 0.42) 49.9%, #357BBC 99.9%);
-    height: 34px;
+    height: 32px;
 }
 
 .extra-bg #mb-nav-icon {
@@ -154,6 +159,7 @@ body {
 .topnav .icon {
     display: none;
 }
+
 
 @media screen and (max-width: 600px) {
     .topnav a {
@@ -501,7 +507,7 @@ a {
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     padding-bottom: 10px;
     margin: 0 auto;
 }
@@ -529,13 +535,10 @@ a {
 }
 
 [form] {
-    width: 60%;
+    width: 100%;
     margin: auto;
     background: #fff;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-bottom: 15px;
-    box-shadow: 5px 5px #00000029;
+    height: 800px;
 }
 
 .content-header h3 {
@@ -604,6 +607,7 @@ input[type="submit"] {
 }
 
 .wrapper {
+
     height: 100%;
     /* add Flexbox code here! */
     display: flex;
@@ -624,7 +628,7 @@ input[type="submit"] {
 }
 
 .create-btn {
-    width: 30%;
+    width: 50%;
     margin: auto;
     text-align: center;
 }
