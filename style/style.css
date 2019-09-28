@@ -315,6 +315,20 @@ button:not(#backBtn) {
         margin-top: -16px;
         padding: 20px;
     }
+    .student input[type=email],
+    .student input[type=password],
+    .student input[type=text],
+    .student select {
+        width: 100%;
+        border: 2px solid #DBD9D9;
+        border-radius: 20px;
+        line-height: 2.6em;
+        /* background: #A01B5C; */
+        background-color: #57489D;
+        outline: none;
+        color: white !important;
+        padding-left: 20px;
+    }
     #signLink {
         color: white;
         font-size: 16px !important;
