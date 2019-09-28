@@ -5,6 +5,7 @@
     <title>Error</title>
     <link rel="stylesheet" type="text/css" href="style/error.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b74471b9a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="bg">
@@ -18,13 +19,9 @@
         <p>let's find you</p>
     </div>
     <div class="err-button">
-        <button class="error" onclick="home()">Back Home</button>
+        <button id="backBtn" class="error" onClick="javascript:history.go(-1)"><i class="fas fa-arrow-left">&nbsp;Back</i></button>
+
     </div>
-    <script>
-        function home() {
-            window.location.href = "dashboard.php";
-        }
-    </script>
 
 </div>
 </div>

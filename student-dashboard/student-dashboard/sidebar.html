@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome To Artemis Classroom App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Team Artemis Mini-classroom, an open source platform that seeks to connect learners to teachers from all over the world">
+   <meta name="keywords" content="Opensource,Learning,HNGI,Flutterwave,Classsroom,HTML,PHP,JAVASCRIPT,">
+   <meta name="author" content="Team-Artemis">
+	<link rel="stylesheet" href="sidebar.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <header class="dash-header">
+      <div class="dash-logo">
+        <a href=""><img src="img/vector.png"></a>
+      </div>
+
+      <div class="dash-profile">
+        <span class="name">
+          <p>Welcome</p>
+          <h1>Prosper Artemis</h1>
+        </span>
+        <span class="image-container">
+          <img src="img/group.png" id="image">
+           <div class="drop-down">
+              <img src="img/arrow.png" id="arrow">
+              <ul id="nav-menu">
+                <li><a href="m">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li>Logout</li>
+              </ul>  
+           </div>
+           
+        </span>
+      </div>
+    </header>
+
+    <div class="extra-bg">
+      <i class="fa fa-bars" id="mb-nav-icon"></i>
+    </div>
+
+  </div>
+
+  
+
+
+  <section>
+    <div class="side-bar">
+      <div class="menu">
+
+        <div class="sidebar-item">Sidebar</div>
+
+      </div>
+    </div>
+
+    <div class="body">
+      I'm a content
+    </div>
+  </section>
+
+  <script type="text/javascript">
+      const navIcon = document.querySelector("#arrow")
+      const navMenu =  document.querySelector("#nav-menu")
+      const dash =  document.querySelector(".dash-profile")
+
+      var showNav;
+      navIcon.addEventListener('click', () => {
+        if(showNav){
+          navMenu.style.display ="none";
+          // dash.style.right = "121px"
+          showNav = false;
+        }else{
+          navMenu.style.display ="block"
+          // dash.style.right = "95px"
+          showNav = true;
+        }
+
+      })
+
+      var showSB = true;
+
+      document.querySelector("#mb-nav-icon").addEventListener('click', () => {
+
+        if(showSB){
+          document.querySelector(".side-bar").style.width ="53vw";
+          showSB = false;
+
+        }else{
+
+          document.querySelector(".side-bar").style.width ="0px";
+          showSB = true;
+        }
+
+      })
+  </script>
+</body>
+</html>
