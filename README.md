@@ -6,7 +6,9 @@
 ![hng](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
 
 <br>
+</div>
 
+Test Site here: https://mini-classroom.000webhostapp.com
 
 # Installation Guide
 
@@ -44,7 +46,8 @@ Visit localhost:8000 in your browser
 git checkout staging
 ```
 
-
+- Comment on all Changes made on each file you contribute to 
+- Use proper commit comments for your commits 
 - Push to `staging` branch and open a pull request
 - Wait for review
 
