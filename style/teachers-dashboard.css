@@ -555,7 +555,7 @@ a {
     height: 126px;
     padding: 5% 10% 10% 5%;
     /* Blue 1 */
-    background: #357BBC;
+    background: #8467AE;
 }
 
 .c-class-form-header img {
@@ -564,10 +564,13 @@ a {
 }
 
 [form] {
-    width: 100%;
+    width: 60%;
     margin: auto;
     background: #fff;
-    height: 800px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 15px;
+    box-shadow: 5px 5px #00000029;
 }
 
 .content-header h4 {
@@ -616,13 +619,13 @@ input[type="submit"] {
     -moz-box-sizing: border-box;
     outline: none;
     border: none;
-    width: 80%;
+    width: 50%;
     color: #fff;
     margin-top: 30px;
     margin-bottom: 50px;
     padding: 12px;
     border-radius: 20px;
-    background: #357BBC;
+    background: #8467AE;
 }
 
 @media screen and (max-width: 800px) {
@@ -652,6 +655,8 @@ input[type="submit"] {
     height: 400px;
     background: white;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 
 .create-btn {

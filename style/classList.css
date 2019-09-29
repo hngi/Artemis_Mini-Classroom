@@ -332,6 +332,7 @@ hr {
     width: 40%;
     padding-left: 30px;
     padding-right: 30px;
+    height: 200px;
 }
 
 .description a {
@@ -347,6 +348,11 @@ hr {
 p#descText {
     line-height: 22px;
     text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .space {

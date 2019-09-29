@@ -96,9 +96,9 @@ if($totalEnrolments > 1) {
                                         <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569704826/icons8-class-80_1_jozusq.png" class="medium" alt="">
                                     </td>
                                     <td>
-                                        <h4>'.$recentRow["class_name"].'</h4>
+                                        <h4 style="padding: 0px 3px">'.$recentRow["class_name"].'</h4>
                                     </td>
-                                    <td style="padding-left:20%">
+                                    <td style="padding-left:3px">
                                         <a href="teacher_add_item.php?class_id='.$recentRow["class_id"].' "> 
                                             <i class="fa fa-edit fa-lg edit"></i>
                                         </a>
@@ -151,9 +151,9 @@ if($totalEnrolments > 1) {
                                         <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569705144/icons8-students-64_1_e0xmna.png" class="medium" alt="">
                                     </td>
                                     <td>
-                                        <h4>'.$recentRow["class_name"].'</h4>
+                                        <h4 style="padding: 0px 3px">'.$recentRow["class_name"].'</h4>
                                     </td>
-                                    <td style="padding-left:35%">
+                                    <td style="padding-left:3px">
                                         <h4>'.$studentsCount.'</h4>
                                     </td>
                                 </tr>';

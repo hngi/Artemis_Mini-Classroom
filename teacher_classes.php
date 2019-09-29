@@ -51,7 +51,7 @@ $con = connect();
                                 echo '
                                 <img src="class_pics/no_image.jpg" width="200px" height="150px">
                                 <a href="upload_class_picture.php?class_id='.$row["class_id"].'">
-                                <button style="padding: 5px; margin: 5px; ">Upload Class Thumbnail</button>
+                                <button class ="thumbnail_btn">Upload Class Picture</button>
                                 </a>';
                             } else {
                                 // picture exist
