@@ -82,10 +82,10 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
                 if($classItemsCount > 0) {
                     while($row = mysqli_fetch_assoc($classItemsResult)) {
                         echo '
+                        <div class ="access">
                         <div class="wrapper ">
-                            <div class="videos">
-                                <video src="tfpdl-mitbi1948wd.mkv"></video>
-                            </div>
+                       
+                            
                             <div class="description">
                                 <a id="course-link" href="">'.$row["item_title"].'</a>
                                 <hr>
@@ -93,13 +93,8 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
                                 <p id="descText"> '.$row["item_content"].'
                                 </p>
                             </div>
-                            <div class="space">
-            
                             </div>
-                            <div class="enroll_btn">
-                                
-                                <p id="participants">  </p>
-                            </div>
+                           
             
                         </div>';
                     }

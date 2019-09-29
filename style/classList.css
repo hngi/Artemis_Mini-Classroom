@@ -302,6 +302,11 @@ section {
     margin: 0 auto;
 }
 
+.access .wrapper {
+    min-height: 150px !important;
+    overflow: scroll;
+}
+
 .wrapper {
     display: flex;
     border: 1px solid #C4C4C4;
@@ -325,6 +330,10 @@ hr {
     border: 1px solid #00000029;
     margin: 0 0 5px 0;
     box-shadow: 2px 2px 2px 2px #00000010;
+}
+
+.access .description {
+    width: 100% !important;
 }
 
 .description {
