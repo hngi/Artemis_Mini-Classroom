@@ -91,10 +91,10 @@ if(isset($_GET["class_id"])) {
                     <input class="form-input" id="class-name" name="itemTitle" type="text" placeholder="Item Title" required />
                     <!--<input class="form-input" id="duration" name="duration" type="text" placeholder="Est. time of completion" required />-->
                     <textarea id="class-description" name="itemContent" required>Item Content</textarea>
-                    <script>
+                    <!--<<script>
                         CKEDITOR.replace( 'itemContent' );
                     </script>
-                    <!--<textarea id="class-content" placeholder="Class content" required></textarea>-->
+                    <textarea id="class-content" placeholder="Class content" required></textarea>-->
                     <input type="submit" name="addItem" value="Add Item">
                 </form>
             </div>
