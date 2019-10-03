@@ -1,6 +1,5 @@
 body{
     background-image: none;
-    font-size: x-small; 
 }
 
 #wrapper{
@@ -15,7 +14,7 @@ body{
 }
 
 #faq{
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
