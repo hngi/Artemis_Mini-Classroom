@@ -80,7 +80,7 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
                     ?>
                     <input class="form-input" id="class-name" name="className" type="text" placeholder="Class name" required />
                     <!--<input class="form-input" id="duration" name="duration" type="text" placeholder="Est. time of completion" required />-->
-                    <textarea id="class-description" name="classDesc" placeholder="Short description" required></textarea>
+                    <textarea id="class-description" name="classDesc" placeholder="Short description (less than 100 words)" required></textarea>
                     <!--<textarea id="class-content" placeholder="Class content" required></textarea>-->
                     <input type="submit" name="createClass" value="Create">
                 </form>
@@ -94,5 +94,6 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
 
 
 </body>
+
 
 </html>

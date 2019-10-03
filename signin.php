@@ -108,7 +108,7 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
                     
                     <label class="form-label" for="email"></label>
                     <br>
-                    <p><input class="form-input" id="signinEmail" name="signinEmail" type="email" placeholder="Email" required onkeyup="signinValidateEmail()" />
+                    <p><input class="form-input" id="signinEmail" name="signinEmail" type="email" placeholder="Email" required onchange="signinValidateEmail()" />
                     <div class="errorMsg" id="signinEmailError" style="visibility: hidden;">&nbsp;</div></p>
                     <!--                input 1-->
 <br>
@@ -120,15 +120,15 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
                     
                     <?php
                     if ($role == "teacher"){
-                        echo "<a href='signin.php?role=student' id='signLink'><b>Student Sign in</b></a>";
+                        echo "<a href='signin.php?role=student' id='signLink'><b><h4>Student Sign in</h4></b></a>";
                     }else{
-                        echo "<a href='signin.php?role=teacher' id='signLink'><b>Teacher Sign in</b></a>";
+                        echo "<a href='signin.php?role=teacher' id='signLink'><b><h4>Teacher Sign in</h4></b></a>";
                     }
 
 
                     ?>
 
-                    <a href="forgot_password.php" style="float:right">Forgot Password?</a>
+                    <a href="forgot_password.php" style="float:right; display:none">Forgot Password?</a>
                     <br><br>
                     <!--                input 1-->
                     <!-- <input type="submit" value="Login"> -->
@@ -146,40 +146,40 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
             <section class="signup" id="signup">
                 <h1>Join the network</h1>
                 <!-- <button id="teacher_signin">Teacher?</button> -->
-                <br>
+                
                 <form method="">
                     <!--<h1>Sign up</h1>-->
                     <!--                input 1-->
                     <label for="firstname"></label>
-                    <p><input id="firstName" name="firstName" type="text" placeholder="Firstname" required onkeyup="validateFirstName()"/>
+                    <p><input id="firstName" name="firstName" type="text" placeholder="Firstname" required onchange="validateFirstName()"/>
                     <div class="errorMsg" id="firstNameError" style="visibility: hidden;">&nbsp;</div>
                     </p>
-                    <br>
+                    
                     <!--                input 1-->
                     <label for="lastname"></label>
-                    <p><input id="lastName" name="lastName" type="text" placeholder="Lastname" required onkeyup="validateLastName()" />
+                    <p><input id="lastName" name="lastName" type="text" placeholder="Lastname" required onchange="validateLastName()" />
                     <div class="errorMsg" id="lastNameError" style="visibility: hidden;">&nbsp;</div>
                     </p>
-                    <br>
+                    
                     <!--                input 1-->
                     <label for="email"></label>
-                    <p><input id="email" name="email" type="email" placeholder="Email" required onkeyup="validateEmail()" />
+                    <p><input id="email" name="email" type="email" placeholder="Email" required onchange="validateEmail()" />
                     <div class="errorMsg" id="emailError" style="visibility: hidden;">&nbsp;</div></p>
-                    <br>
+                    
                     <!-- <p><input id="username" name="username" type="text" placeholder="Username" required /></p> -->
     
                     <!--                input 1-->
                     <label for="password">Password:</label>
                     <p><input id="password" name="password" type="password" placeholder="password" pattern=".{8,}" required onkeyup="validatePassword()" />
                     <div class="errorMsg" id="passwordError" style="visibility: hidden;">&nbsp;</div></p>
-                    <br>
+                    
                     <!--                input 1-->
                     <label for="confirm_password">Confirm Password:</label>
 
                     <p><input id="confirmPassword" name="confirmPassword" type="password" placeholder=" Confirm Password" pattern=".{8,}" required onkeyup="validateConfirmPassword()" />
                     <div class="errorMsg" id="confirmPasswordError" style="visibility: hidden;">&nbsp;</div>
                     </p>
-                    <br>
+                    
 
                     <p>
                         <select name="role" id="role" style="padding: 10px;">

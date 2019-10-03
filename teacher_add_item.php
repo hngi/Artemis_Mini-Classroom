@@ -94,7 +94,7 @@ if(isset($_GET["class_id"])) {
                     <script>
                         CKEDITOR.replace( 'itemContent' );
                     </script>
-                    <!--<textarea id="class-content" placeholder="Class content" required></textarea>-->
+                    <!--<<textarea id="class-content" placeholder="Class content" required></textarea>-->
                     <input type="submit" name="addItem" value="Add Item">
                 </form>
             </div>

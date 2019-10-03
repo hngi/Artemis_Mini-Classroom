@@ -159,6 +159,12 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
             
         </section>
     </div>
+    <div class ="vertical-space">
+
+    </div>
+    <footer>
+
+    </footer>
     <script src="js/classList.js"></script>
     <script src="js/header.js"></script>
 </body>

@@ -19,7 +19,6 @@ body {
 }
 
 .navbar-collapse a {
-
     font-family: Roboto;
     font-weight: bold;
     font-size: 16px;
@@ -79,39 +78,38 @@ nav ul li a:hover {
     margin-bottom: 10px;
     padding: 6px 20px;
     text-decoration: none;
-
 }
+
 
 }
 
 /*-----------   TABLET----------------------- TABLET--- TABLET--*/
 @media only screen and (max-width:768px) {
-
     .w-banner-vector {
         height: 45vh;
     }
-
+    
     .welcome-banner-content {
         top: 50%;
         padding: 0 40px;
     }
-
+    
     .welcome-banner-content .text {
         width: 100%;
     }
-
+    
     .welcome-banner-content .text h2 {
         font-size: 65px;
         line-height: 49px;
         margin-bottom: 30px;
     }
-
+    
     .welcome-banner-content .text .desc {
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 45px;
     }
-
+    
     .welcome-banner-content .w-btn {
         font-size: 20px;
         padding: 15px 25px;
@@ -124,87 +122,82 @@ nav ul li a:hover {
         display: flex;
         justify-content: center;
     }
-
+    
     .text {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    
     .w-btn {
         margin: 10px;
     }
 }
-
 @media only screen and (max-width:455px) {
-
     .welcome-header {
         padding-top: 10px;
     }
-
+    
     .nav-icon {
         margin-right: 30px;
     }
-
-
+    
     .logo img {
         height: 45px;
     }
-
+    
     header .nav {
         padding: 45px 0 0 0px;
         top: 55px;
     }
-
+    
     header .nav ul {
         width: 100%;
         text-align: center;
         padding-left: 0;
     }
-
     /*.nav-icon{
         margin-right:30px;
     }*/
+    
     header .nav ul li {
         display: block;
         padding-right: 0px;
     }
-
+    
     header .nav ul li a {
         font-size: 22px;
         line-height: 48px;
-
     }
-
+    
     .w-banner-vector {
         height: 41vh;
     }
-
+    
     .welcome-banner-content {
         top: 55%;
         padding: 0;
     }
-
+    
     .welcome-banner-content .text {
         width: 91%;
         margin: .1 auto;
     }
-
+    
     .welcome-banner-content .text h2 {
-        font-size: 40px;
+        font-size: 36px;
         line-height: 30px;
         margin-bottom: 15px;
     }
-
+    
     .welcome-banner-content .text .desc {
-        font-size: 18px;
-        line-height: 25px;
-        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
     }
-
+    
     .welcome-banner-content .w-btn {
         font-size: 16px;
         padding: 10px 22px;
     }
-
 }
