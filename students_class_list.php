@@ -135,7 +135,7 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
                             echo '
                             </div>
                             <div class="description">
-                                <a id="course-link" href="">'.$row["class_name"].'</a>
+                                <a id="course-link" href="student-class-landing.php?classId='.$row["class_id"].'">'.$row["class_name"].'</a>
                                 <hr>
                                 <p id="course_stats">Name of Teacher:  '.$teacherName.'</p>
                                 <p id="date_created">Date Created : '.$row["date_created"].'</p>
