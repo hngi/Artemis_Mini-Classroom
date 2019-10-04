@@ -360,7 +360,7 @@ p#descText {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -499,8 +499,6 @@ video {
 }
 
 
-
-
 /* Change color of dropdown links on hover */
 
 .dropdown-content a:hover {
@@ -515,14 +513,13 @@ video {
 }
 
 
-
 /* Class List Enrolment Style */
-.total-enrolment{
+
+.total-enrolment {
     color: grey;
     font-size: 14px;
     font-style: italic;
 }
-
 
 @media screen and (max-width: 1000px) {
     section {
