@@ -4,7 +4,27 @@
     error_reporting (1);
     include('connection.php');
 
+    
+    
+    
+    
     $con = connect();
+    
+    function students_enroled($class_id)
+    {
+        global $con;
+        $query_enrolments = "SELECT * FROM enrolment WHERE class_id ='$class_id'";
+        $run_query = mysqli_query($con, $query_enrolments);
+
+        $total_enrolments = mysqli_num_rows($run_query);
+        if($total_enrolments > 1){
+            return "<p>$total_enrolments students also enroled for this course</p>";
+        }elseif($total_enrolments === 1){
+            return "<p>$total_enrolments other student also enroled for this course</p>";
+        }else{
+            return "<p>Be the first to enrol for this course</p>";
+        }
+    }
 
     $searchTerm = $_POST["searchTerm"];
     
@@ -55,6 +75,7 @@
                     <p id="date_created">Date Created : '.$row["date_created"].'</p>
                     
                     <p id="descText"> '.$row["class_desc"].'
+                    <p>'.students_enroled($row["class_id"]).'</p>
                     </p>
                 </div>
                 <div class="space">
