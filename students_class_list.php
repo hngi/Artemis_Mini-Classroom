@@ -15,11 +15,11 @@ function students_enroled($class_id)
 
     $total_enrolments = mysqli_num_rows($run_query);
     if($total_enrolments > 1){
-        return "<p>$total_enrolments students also enroled for this course</p>";
+        return "<p class='total-enrolment'>$total_enrolments students also enroled for this course</p>";
     }elseif($total_enrolments === 1){
-        return "<p>$total_enrolments other student also enroled for this course</p>";
+        return "<p class='total-enrolment'>$total_enrolments other student also enroled for this course</p>";
     }else{
-        return "<p>Be the first to enrol for this course</p>";
+        return "<p class='total-enrolment'>Be the first to enrol for this course</p>";
     }
 }
 
