@@ -32,8 +32,13 @@
                     <a class="nav-link active" href="signin.php?role=student">Student</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="contactus.php">Contact Us</a>
+                    <a class="nav-link active" href="faq.html">FAQ</a>
+
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contactus.php">Contact Us</a>
+                  </li>
+                
             </ul>
         </div>
     </nav>

@@ -7,6 +7,23 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
     header('Location:signin.php');
 }
 
+function students_enroled($class_id)
+{
+    global $con;
+    $query_enrolments = "SELECT * FROM enrolment WHERE class_id ='$class_id'";
+    $run_query = mysqli_query($con, $query_enrolments);
+
+    $total_enrolments = mysqli_num_rows($run_query);
+    if($total_enrolments > 1){
+        return "<p class='total-enrolment'>$total_enrolments students also enroled for this course</p>";
+    }elseif($total_enrolments === 1){
+        return "<p class='total-enrolment'>$total_enrolments other student also enroled for this course</p>";
+    }else{
+        return "<p class='total-enrolment'>Be the first to enrol for this course</p>";
+    }
+}
+
+
 if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
     $studentId = $_SESSION["userId"];
     $classId = $_GET["classId"];
@@ -135,12 +152,13 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
                             echo '
                             </div>
                             <div class="description">
-                                <a id="course-link" href="">'.$row["class_name"].'</a>
+                                <a id="course-link" href="student-class-landing.php?classId='.$row["class_id"].'">'.$row["class_name"].'</a>
                                 <hr>
                                 <p id="course_stats">Name of Teacher:  '.$teacherName.'</p>
                                 <p id="date_created">Date Created : '.$row["date_created"].'</p>
                                 
                                 <p id="descText"> '.$row["class_desc"].'
+                                <p>'.students_enroled($row["class_id"]).'</p>
                                 </p>
                             </div>
                             <div class="space">
