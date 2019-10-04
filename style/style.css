@@ -29,6 +29,7 @@ main {
     width: 40%;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 aside {
@@ -109,7 +110,7 @@ form a {
 .student input[type=email],
 .student input[type=password],
 .student input[type=text],
-.student select{
+.student select {
     width: 100%;
     border: 2px solid #DBD9D9;
     border-radius: 20px;
@@ -159,7 +160,32 @@ form a {
     margin: auto;
 }
 
-.logon input[type=submit], button {
+#backBtn {
+    font-family: 'Roboto', sans-serif !important;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 2em;
+    background: transparent;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+    display: block;
+}
+
+#signLink {
+    color: white;
+}
+
+#signLink:hover {
+    color: white;
+}
+
+.logon input[type=submit],
+button:not(#backBtn) {
     width: 170px;
     height: 40px;
     text-align: center;
@@ -206,13 +232,13 @@ form a {
 
 #show_register {
     text-decoration: none;
-    color: #FF0000;
+    color: white;
     ;
 }
 
 #show_login {
     text-decoration: none;
-    color: #FF0000;
+    color: white;
 }
 
 .form-logo {
@@ -291,10 +317,29 @@ form a {
         margin-top: -16px;
         padding: 20px;
     }
+    .student input[type=email],
+    .student input[type=password],
+    .student input[type=text],
+    .student select {
+        width: 100%;
+        border: 2px solid #DBD9D9;
+        border-radius: 20px;
+        line-height: 2.6em;
+        /* background: #A01B5C; */
+        background-color: #57489D;
+        outline: none;
+        color: white !important;
+        padding-left: 20px;
+    }
+    #signLink {
+        color: white;
+        font-size: 16px !important;
+    }
 }
 
 
 /* validation styles */
+
 .errorMsg {
     color: #DE9D8F !important;
     margin-top: 5px;
@@ -304,6 +349,7 @@ form a {
 button[type="button"]:disabled {
     cursor: not-allowed;
 }
+
 
 /* .disabled {
     cursor: not-allowed;

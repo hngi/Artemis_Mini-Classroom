@@ -8,6 +8,7 @@
 
     $email = $_POST["signinEmail"];
     $password = $_POST["signinPassword"];
+    $roleSelected = $_POST["role"];
 
     $hashedPassword = sha1($password);
 
@@ -27,8 +28,8 @@
         $role = $row["role"];
         $activated = $row["activated"];
 
-        if($activated == 1) {
-            // account is activated
+        if($role == $roleSelected) {
+            // role is correct
             // create sessions
             $_SESSION["userId"] = $userId;
             $_SESSION["fullname"] = $firstName . ' ' . $lastName;
@@ -37,18 +38,32 @@
 
             // redirect to dashbaord
             // header("Location:../dashboard.php");
-            echo '<script>
-                window.location.href = "http://localhost/artemis/dashboard.php";
+            
+            // check if user is student or teacher
+            if($role == "teacher") {
+                echo '<script>
+                window.location.href = "teachers-dashboard.php";
                 </script>';
+            } else if($role == "student") {
+                 echo '<script>
+                window.location.href = "students-dashboard.php";
+                </script>';
+            }
+            
 
         } else {
-            // account is not activated
-            echo '<h2>You have not activated your account</h2>';
+            // role is wrong
+            if($role == 'teacher') {
+                echo '<h4>You cannot login as a Student</h4><br>';
+            } else if($role == 'student') {
+                echo '<h4>You cannot login as a Teacher</h4><br>';
+            }
+            
         }
 
     } else {
         // user doest not exist
-        echo 'Incorrect Username or password';
+        echo '<div class="errorMsg">Incorrect Username or password<br><br></div>';
         
     }
 ?>

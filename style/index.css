@@ -1,82 +1,52 @@
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 2vw 5vw;
     font-family: 'Roboto', sans-serif;
-}
-.welcome-banner{
-    height:100vh;
-    position: relative;
-}
-
-.welcome-header{
-    padding-top:50px;
-    display:flex;
-    justify-content: space-between;
+    background: url(https://res.cloudinary.com/wpgroom-com/image/upload/v1569679306/Vector_jtqtpu.png);
+    background-size: 100% 50vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-header .nav{
-
-}
-.nav-icon{
-    margin-right:30px;
-}
-header  .nav ul li{
-    list-style:none;
-    display: inline-block;
-    padding-right:95px;
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
 }
 
-header .nav ul li a{
+.navbar-collapse li {
+    padding-left: 30px;
+}
+
+.navbar-collapse a {
     font-family: Roboto;
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
-    color: #EE4698;
+    color: #EE4698 !important;
     transform: all ease .15s;
     text-decoration: none;
 }
-header .nav ul li a:hover{
+
+.nav-link {
+    text-align: center;
+    color: rebeccapurple;
+}
+
+nav ul li a:hover {
     color: #301189;
 }
-.w-banner-vector{
-    background:url(../img/vector.png);
-    height:50vh;
-    background-size: cover;
-    background-position: top;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width:100%;
-}
-.welcome-banner-content{
-    display:flex;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width:100%;
-    justify-content: space-evenly;
-    padding:0 80px;
+
+.welcome-banner-content {
+    display: flex;
+    width: 100;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
     align-items: center;
-    z-index: 5;
 }
 
-.welcome-banner-content .text{
-    width:50%;
-    margin-top:-15%;
-}
-.welcome-banner-content .w-b-img{
-   width:45%;
-}
-.welcome-banner-content .w-b-img img{
-    height:80vh;
-    margin-left:-50px;
-    float: right;
-    
-}
-
-.welcome-banner-content .text h2{
+.welcome-banner-content .text h2 {
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -86,7 +56,8 @@ header .nav ul li a:hover{
     color: #301189;
     margin-bottom: 0;
 }
-.welcome-banner-content .text .desc{
+
+.welcome-banner-content .text .desc {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -94,7 +65,8 @@ header .nav ul li a:hover{
     color: #000000;
     margin-bottom: 38px;
 }
-.welcome-banner-content .w-btn{
+
+.welcome-banner-content .w-btn {
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
@@ -103,141 +75,129 @@ header .nav ul li a:hover{
     background: linear-gradient(90deg, #603996 50%, #357BBC 100%);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    padding:6px 20px;
+    margin-bottom: 10px;
+    padding: 6px 20px;
     text-decoration: none;
+}
+
 
 }
 
 /*-----------   TABLET----------------------- TABLET--- TABLET--*/
-@media only screen and (max-width:768px){
-    .welcome-header{
-        padding-top:50px;
-        display:block;
+@media only screen and (max-width:768px) {
+    .w-banner-vector {
+        height: 45vh;
     }
-
-    header .nav{
-        background: white;
-        padding:40px 0 0 50px;
-        z-index:10;
-        position: absolute;
-        top:116px;
-        left:-100%;
-        width:100%;
-        transition: all ease .3s;
-        bottom:0;
-    }
-    /*.nav-icon{
-        margin-right:30px;
-    }*/
-    header  .nav ul li{
-        display:block;
-        padding-right:0px;
-    }
-
-    header .nav ul li a{
-        font-size: 32px;
-        line-height: 85px;
-    }
-    .w-banner-vector{
-        height:45vh;
-    }
-    .welcome-banner-content{
+    
+    .welcome-banner-content {
         top: 50%;
-        padding:0 40px;
+        padding: 0 40px;
     }
-
-    .welcome-banner-content .text{
-        width:100%;
+    
+    .welcome-banner-content .text {
+        width: 100%;
     }
-    .welcome-banner-content .w-b-img{
-      /* width:45%;*/
-       display: none;
-    }
-    /*.welcome-banner-content .w-b-img img{
-        height:80vh;
-        margin-left:-50px;
-        float: right;
-        
-    }*/
-
-    .welcome-banner-content .text h2{
+    
+    .welcome-banner-content .text h2 {
         font-size: 65px;
         line-height: 49px;
         margin-bottom: 30px;
     }
-    .welcome-banner-content .text .desc{
+    
+    .welcome-banner-content .text .desc {
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 45px;
     }
-    .welcome-banner-content .w-btn{
+    
+    .welcome-banner-content .w-btn {
         font-size: 20px;
-        padding:15px 25px;
-    } 
+        padding: 15px 25px;
+    }
 }
 
 /*--------------------------------- MOBILE-------------------- MOBILE ------------*/
-
-@media only screen and (max-width:455px){
-    .welcome-header{
-        padding-top:10px;
+@media only screen and (max-width:800px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
     }
-
-    .nav-icon{
-        margin-right:30px;
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .nav-icon img{
-        height:32px;
+    
+    .w-btn {
+        margin: 10px;
     }
-    .logo img{
-        height:45px;
+}
+@media only screen and (max-width:455px) {
+    .welcome-header {
+        padding-top: 10px;
     }
-    header .nav{
-        padding:45px 0 0 0px;
-        top:55px;
+    
+    .nav-icon {
+        margin-right: 30px;
     }
-     header .nav ul{
-        width:100%;
-        text-align:center;
-        padding-left:0;
+    
+    .logo img {
+        height: 45px;
+    }
+    
+    header .nav {
+        padding: 45px 0 0 0px;
+        top: 55px;
+    }
+    
+    header .nav ul {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
     }
     /*.nav-icon{
         margin-right:30px;
     }*/
-    header  .nav ul li{
-        display:block;
-        padding-right:0px;
+    
+    header .nav ul li {
+        display: block;
+        padding-right: 0px;
     }
-
-    header .nav ul li a{
+    
+    header .nav ul li a {
         font-size: 22px;
         line-height: 48px;
-        
     }
-    .w-banner-vector{
-        height:41vh;
+    
+    .w-banner-vector {
+        height: 41vh;
     }
-    .welcome-banner-content{
+    
+    .welcome-banner-content {
         top: 55%;
-        padding:0;
+        padding: 0;
     }
-
-    .welcome-banner-content .text{
-        width:91%;
-        margin:.1 auto;
+    
+    .welcome-banner-content .text {
+        width: 91%;
+        margin: .1 auto;
     }
-    .welcome-banner-content .text h2{
-        font-size: 40px;
+    
+    .welcome-banner-content .text h2 {
+        font-size: 36px;
         line-height: 30px;
         margin-bottom: 15px;
     }
-    .welcome-banner-content .text .desc{
-        font-size: 18px;
-        line-height: 25px;
-        margin-bottom: 25px;
-    }
-    .welcome-banner-content .w-btn{
+    
+    .welcome-banner-content .text .desc {
         font-size: 16px;
-        padding:10px 22px;
-    } 
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .welcome-banner-content .w-btn {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
 }
