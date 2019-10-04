@@ -80,9 +80,6 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-
-}
-
 /*-----------   TABLET----------------------- TABLET--- TABLET--*/
 @media only screen and (max-width:768px) {
     .w-banner-vector {
@@ -114,6 +111,10 @@ nav ul li a:hover {
         font-size: 20px;
         padding: 15px 25px;
     }
+
+    #map {
+        overflow:hidden !important;
+    }
 }
 
 /*--------------------------------- MOBILE-------------------- MOBILE ------------*/
@@ -132,6 +133,7 @@ nav ul li a:hover {
     .w-btn {
         margin: 10px;
     }
+    
 }
 @media only screen and (max-width:455px) {
     .welcome-header {
@@ -199,5 +201,15 @@ nav ul li a:hover {
     .welcome-banner-content .w-btn {
         font-size: 16px;
         padding: 10px 22px;
+    }
+    #map {
+        display:none !important;
+    }
+}
+/*Map overflow laptop*/
+
+@media only screen and (max-width:1024px) {
+    #map{
+        overflow:hidden;
     }
 }
