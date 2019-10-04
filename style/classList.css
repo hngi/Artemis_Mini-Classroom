@@ -499,8 +499,6 @@ video {
 }
 
 
-
-
 /* Change color of dropdown links on hover */
 
 .dropdown-content a:hover {
@@ -513,16 +511,6 @@ video {
 .show {
     display: block;
 }
-
-
-
-/* Class List Enrolment Style */
-.total-enrolment{
-    color: grey;
-    font-size: 14px;
-    font-style: italic;
-}
-
 
 @media screen and (max-width: 1000px) {
     section {

@@ -17,28 +17,6 @@ if($classCount > 1) {
     $addS = " ";
 }
 
-// Get all the students enrolled for a particular course
-function enrolees($class_id)
-{
-    global $con;
-    $query_select = 'SELECT * FROM enrolment WHERE class_id = '.$class_id.'';
-    $run_query_select = mysqli_query($con, $query_select);
-    $student = array();
-    while($result = mysqli_fetch_assoc($run_query_select)){
-
-        // select student details based on individually returned student_id
-        $query_student ='SELECT `firstname`, `lastname` FROM users WHERE user_id='.$result['student_id'].'';
-        $run_query_student = mysqli_query($con, $query_student);
-        
-        // Display each student 
-        $student[] = mysqli_fetch_assoc($run_query_student);
-     
-       // return '<p>'.$student['firstname'].' '.$student['lastname'].'</p>';
-    }
-    return $student;
-}
-
-
 // get students enrolled in classes
 $totalEnrolments = 0;
 if($classCount > 0) {
@@ -88,12 +66,8 @@ if($totalEnrolments > 1) {
 
 <body>
     
-
-
     <?php include('fragments/teachers_header.php'); ?>
     
-    
-
     <div class="wrapper">
         <div class="db-box">
             <div class="class-header">
@@ -103,7 +77,6 @@ if($totalEnrolments > 1) {
                 </div>
             </div>
             <div class="content">
-            
                 <table>
                     <!--<tr>-->
                     <!--    <td colspan="3">Your Recent Classes</td>-->
@@ -171,27 +144,13 @@ if($totalEnrolments > 1) {
                               while($studentsRow = mysqli_fetch_assoc($studentsResult)) {
                                 $studentsCount++;
                               }
-
-                             $enrolees = enrolees($recentRow['class_id']); 
-
-                              echo '<div id="enroled-students-modal-window" style="display:none;">
-                                  <div id="modal-content">';
-                                  echo '<span onclick="closeModal()" class="close-modal">&times;</span>';
-                                  echo '<h4 class="modal-title">Student(s) who Enroled for "'.$recentRow['class_name'].'"</h4>';
-                                  echo'<ol class="my-students">';
-                                  foreach ($enrolees as $enrolee) {
-                                    echo '<li class="student">'.$enrolee['firstname'].' '.$enrolee['lastname'].'</li>';
-                                  };
-                                 echo '</ol> 
-                                 </div>
-                               </div>';                           
                               
                                echo ' 
-                                <tr onclick="myStudents()">
+                                <tr>
                                     <td>
                                         <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569705144/icons8-students-64_1_e0xmna.png" class="medium" alt="">
                                     </td>
-                                    <td id="my_course">
+                                    <td>
                                         <h4 style="padding: 0px 3px">'.$recentRow["class_name"].'</h4>
                                     </td>
                                     <td style="padding-left:3px">
@@ -199,18 +158,13 @@ if($totalEnrolments > 1) {
                                     </td>
                                 </tr>';
                                 
-
-
-
-                                
-                                
-                                
-                                
                             }
                         } else {
                             // classes do not exist
                         }
-                        ?>
+                    ?>
+                    
+                    
                     
                 </table>
             </div>
@@ -268,16 +222,11 @@ if($totalEnrolments > 1) {
             </div>
         </div>
 
-
-        
-
-    
-
         <footer>
- 
+            
         </footer>
         <script src="js/header.js"></script>
-        <script src="js/modal.js"></script>
+
 
 </body>
 
