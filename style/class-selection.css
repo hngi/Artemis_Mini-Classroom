@@ -1,0 +1,39 @@
+.body .box{
+	background:#868686;
+	padding:43px 53px;
+	border-radius:19px;
+	display:flex;
+	justify-content:center;
+	max-height:206px;
+}
+.body .box-pos{
+	width: 91%;
+	margin: 0 auto;
+	margin-bottom:31px;
+}
+.body .box-pos p{
+	text-align:center;
+	margin-top:14px;
+	color:#57489D;
+	font-size:22px;
+	font-weight:bold; 	
+}
+
+
+/*------------------------------------MOBILE=--------------------------------- MOBILE------------*/
+@media only screen and (max-width:615px){
+
+	.body .box{
+		padding:35px;
+	}
+	.body .box-pos{
+		width: 81%;
+		margin-bottom:38px;
+	}
+}
+
+/*@media only screen and (max-width:341px){
+	.side-bar{
+		top:145px;
+	}
+}*/

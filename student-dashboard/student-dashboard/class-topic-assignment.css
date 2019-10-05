@@ -1,0 +1,29 @@
+.body-content table{
+	width: 100%;
+}
+.body-content table th{
+	font-size:25px;
+	padding-bottom:22px;
+	border: none;
+}
+.body-content table th:nth-child(2){
+	text-align: right;
+}
+.body-content table tr td{
+	padding-bottom: 22px;
+	border: none;
+}
+.body-content table tr td a{
+	text-decoration: underline;
+}
+
+/*------------------------------------MOBILE=--------------------------------- MOBILE------------*/
+@media only screen and (max-width:615px){
+	
+}
+
+@media only screen and (max-width:341px){
+	.body-content table{
+		width: 333px;
+	}
+}

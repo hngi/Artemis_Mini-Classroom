@@ -1,169 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Artemis_Mini-Classroom</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Welcome To Artemis Classroom App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container student">
-        <main class="logon">
-            <section class="login">
-                <h1>WELCOME BACK! STUDENT</h1>
-                <h1>Sign in to your account</h1>
-                <button id="teacher_signin">Sign in as a Teacher</button>
-                <form action="" method="">
-                    <!--<h1>Sign up</h1>-->
-                    <label class="form-label" for="email">Email:</label>
-                    <p><input class="form-input" id="email" name="email" type="email" placeholder=" example@xyz.com" required /></p>
-                    <!--                input 1-->
-                    <label for="password">Password:</label>
-                    <p><input id="password" name="password" type="password" pattern=".{8,}" required /></p>
-                    <!--                input 1-->
-                    <input type="submit" value="Login">
-                    <p class="message"> Don't have an account? <a href="#" id="show_register">sign up here</a></p>
-                </form>
-            </section>
-            <section class="signup">
-                <h1>Sign up to get Started</h1>
-                <button id="teacher_signin">Sign in as a Teacher</button><br>
-                <form action="" method="">
-                    <!--<h1>Sign up</h1>-->
-                    <!--                input 1-->
-                    <label for="firstname">First Name</label>
-                    <p><input id="firstname" name="firstname" type="text" placeholder=" firstname" required /></p>
-                    <!--                input 1-->
-                    <label for="lastname">Last Name:</label>
-                    <p><input id="lastname" name="lastname" type="text" placeholder=" lastname" required /></p>
-                    <!--                input 1-->
-                    <label for="email">Email:</label>
-                    <p><input id="email" name="email" type="email" placeholder=" example@xyz.com" required /></p>
-                    <!--                input 1-->
-                    <label for="gender"> Gender: &nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="gender" value="male" checked> Male &nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="gender" value="female"> Female &nbsp; </label>
-                    <!--                input 1-->
-                    <!--                input 1--><br><br>
-                    <label for="password">Password:</label>
-                    <p><input id="password" name="password" type="password" placeholder=" minimum of 8 characters" pattern=".{8,}" required /></p>
-                    <!--                input 1-->
-                    <label for="confirm_password">Confirm Password:</label>
-                    <p><input id="confirm_password" name="confirm_password" type="password" placeholder=" minimum of 8 characters" pattern=".{8,}" required /></p>
-                    <!--                input 1-->
-                    <input type="submit" value="Create Account">
-                    <p class="message">Already have an account? <a href="#" id="show_login">Log in</a></p>
-                </form>
-            </section>
+    <nav class="navbar navbar-expand-md bg-light navbar-light ">
+        <a class="navbar-brand" href="#">
+            <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1569679306/logo_tlzipn.png" alt="Artemis classroom logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse  navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="signin.php?role=teacher">Teacher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="signin.php?role=student">Student</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="faq.html">FAQ</a>
 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contactus.php">Contact Us</a>
+                  </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <!-- <div class="container-fluid"> -->
+        <div class="welcome-banner-content row container-fluid">
+            <div class="text col-12 col-md-7 col-lg-7">
+                <h2>WELCOME</h2>
+                <p class="desc">Artemis Mini classroom is an open source platform that seeks to connect teaches and students from various part of the world. We immerse students in a dynamic learning environment where classes are taught with an intention to help students reach their goals and pursue their dream. We believe we can improve the lives of others through learning!</p>
+                <div class="row">
+                    <!--					<a href="signin.php?role=teacher" class="w-btn col-sm-12 col-lg-5">GET STARTED AS A TEACHER</a>-->
+                    <a href="signin.php?role=student" class="w-btn col-sm-12 col-lg-5">GET STARTED</a>
+                </div>
+            </div>
 
-        </main>
-        <aside class="logo">
-            <section class="slogan">
-                <h1>TEAM ARTEMIS</h1>
-                <P>...learn, share, collaborate</P>
-            </section>
-        </aside>
-    </div>
-
-
-    <!-- TEACHER lOGON PAGE -->
-    <div class="teacher">
-
-        <div class="container ">
-            <main class="logon">
-                <section class="login">
-                    <h1> WELCOME BACK! TEACHER</h1>
-                    <h1>Sign in to your account</h1>
-                    <button id="student_signin">Sign in as a Student</button>
-                    <form action="" method="">
-                        <!--<h1>Sign up</h1>-->
-                        <label for="email">Email</label>
-                        <p><input id="email" name="email" type="email" placeholder="example@xyz.com" required /></p>
-                        <!--                input 1-->
-                        <label for="password">Password</label>
-                        <p><input id="password" name="password" type="password" placeholder="minimum of 8 characters" pattern=".{8,}" required /></p>
-                        <!--                input 1-->
-                        <input type="submit" value="Login">
-                        <p class="message"> Don't have an account? <a href="#" id="show_register">sign up here</a></p>
-                    </form>
-                </section>
-                <section class="signup">
-                    <h1>Sign up to get Started</h1>
-                    <button id="Student_signin">Sign in as a Student</button>
-                    <form action="" method="">
-                        <!--<h1>Sign up</h1>-->
-                        <!--                input 1-->
-                        <label for="firstname">First Name</label>
-                        <p><input id="firstname" name="firstname" type="text" placeholder="First Name" required /></p>
-                        <!--                input 1-->
-                        <label for="lastname">Last Name</label>
-                        <p><input id="lastname" name="lastname" type="text" placeholder="lastname" required /></p>
-                        <!--                input 1-->
-                        <label for="email">Email</label>
-                        <p><input id="email" name="email" type="email" placeholder="example@xyz.com" required /></p>
-                        <!--                input 1-->
-                        <label for="gender"></label>Gender:
-                        <input type="radio" name="gender" value="male" checked> Male
-                        <input type="radio" name="gender" value="female">Female
-                        <!--                input 1-->
-                        <!--                input 1-->
-                        <label for="password">Password</label>
-                        <p><input id="password" name="password" type="password" placeholder="minimum of 8 characters" pattern=".{8,}" required /></p>
-                        <!--                input 1-->
-                        <label for="confirm_password">Confirm Password</label>
-                        <p><input id="confirm_password" name="confirm_password" type="password" placeholder="minimum of 8 characters" pattern=".{8,}" required /></p>
-                        <!--                input 1-->
-                        <input type="submit" value="Create Account">
-                        <p class="message">Already have an account? <a href="#" id="show_login">Log in</a></p>
-                    </form>
-                </section>
-
-
-            </main>
-
-            <aside class="logo">
-                <section class="slogan">
-                    <h1>TEAM ARTEMIS</h1>
-                    <P>...learn, share, collaborate</P>
-                </section>
-            </aside>
+            <div class="w-b-img col-md-4 col-lg-4">
+                <img style="width:100%" class="img-fluid" src="https://res.cloudinary.com/wpgroom-com/image/upload/v1569678455/1_whdigv.png" alt="artemis classroom">
+            </div>
         </div>
     </div>
 
-    <!--  -->
-    <!--  -->
-    <script type="text/javascript">
-        $(function() {
-            $('#show_register').click(function() {
-                $('.login').hide();
-                $('.signup').show();
-                return false;
-            });
-            $('#show_login').click(function() {
-                $('.login').show();
-                $('.signup').hide();
-                return false;
-            });
-        });
-        $(function() {
-            $('#teacher_signin').click(function() {
-                $('.teacher').show();
-                $('.student').hide();
-                return false;
-            });
-            $('#student_signin').click(function() {
-                $('.student').show();
-                $('.teacher').hide();
 
-                return false;
-            });
-
-        });
-    </script>
 </body>
 
 </html>

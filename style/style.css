@@ -1,23 +1,88 @@
+/*Stylesheet for Artemis Mini-Class App*/
+
+
+/* Structure */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+    color: #ffffff;
+    font-style: normal;
+    font-size: 16px;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     padding: 40px;
+    margin: none;
 }
 
 main {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 aside {
-    width: 50%;
+    background-color: rgba(242, 242, 242, 0.4) !important;
+    box-shadow: 30px 30px 100px rgba(0, 0, 0, 0.25) !important;
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.student {
+    /* background-color: #A01B5C; */
+    background-color: #57489D;
+}
+
+.student .inner-container {
+    /* background: #A01B5C; */
+    background-color: #57489D;
+    box-shadow: 30px 30px 90px rgba(0, 0, 0, 0.25), inset 30px 30px 90px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.teacher {
+    background-color: #57489D;
+}
+
+.teacher .inner-container {
+    background: #57489D;
+    box-shadow: 30px 30px 90px rgba(0, 0, 0, 0.25), inset 30px 30px 90px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+
+/*--------------------------------------------------*/
+
+
+/* Form Styling */
+
+form {
+    margin: auto;
+}
+
+form a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .signup {
@@ -28,104 +93,271 @@ aside {
     display: none;
 }
 
-
-/* Form Styling */
-
-.logon input[type=email],
-[type=password],
-[type=text] {
+.teacher input[type=email],
+.teacher input[type=password],
+.teacher input [type=text],
+.teacher select {
     width: 100%;
     border: 2px solid #DBD9D9;
-    border-radius: 3px;
+    border-radius: 20px;
     line-height: 2.6em;
+    background: #57489D !important;
+    outline: none;
+    color: white !important;
+    padding-left: 20px;
+}
+
+.student input[type=email],
+.student input[type=password],
+.student input[type=text],
+.student select {
+    width: 100%;
+    border: 2px solid #DBD9D9;
+    border-radius: 20px;
+    line-height: 2.6em;
+    /* background: #A01B5C; */
+    background-color: #57489D;
+    outline: none;
+    color: white !important;
+    padding-left: 20px;
 }
 
 .logon label {
-    color: #000000;
-    font-size: 1.125em;
+    color: white;
+    font-size: 0.8em;
     margin-bottom: -100px;
+    display: none;
 }
 
 #teacher_signin {
-    background-color: #053575;
+    background: rgba(255, 255, 255, 0.4);
     color: #ffffff;
-    border-radius: 25px;
+    border-radius: 20px;
     width: 8.3em;
     padding: 1%;
     display: block;
     margin: auto;
-    outline:none;
-    cursor:pointer;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 #student_signin {
-    background-color: #053575;
+    background: rgba(255, 255, 255, 0.4);
     color: #ffffff;
-    border-radius: 25px;
+    border-radius: 20px;
     width: 8.3em;
     padding: 1%;
     display: block;
     margin: auto;
-    outline:none;
-    cursor:pointer;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.student h1 {
-    font-size: 1.75em;
-    color: #053575;
-    text-align: center;
-}
-
-.login form {
-    width: 70%;
+.login {
+    width: 90%;
     margin: auto;
+}
+
+#backBtn {
+    font-family: 'Roboto', sans-serif !important;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 2em;
+    background: transparent;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+    display: block;
+}
+
+#signLink {
+    color: white;
+}
+
+#signLink:hover {
+    color: white;
+}
+
+.logon input[type=submit],
+button:not(#backBtn) {
+    width: 170px;
+    height: 40px;
+    text-align: center;
+    line-height: 2em;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1;
+    /* Firefox */
 }
 
 .teacher h1 {
     font-size: 1.75em;
-    color: #053575;
+    font-family: Imprima;
+    color: #ffffff;
     text-align: center;
-}
-
-.signup form {
-    width: 70%;
-    margin: auto;
-}
-
-.logon input[type=submit] {
-    width: 282px;
-    height: 60px;
-    text-align: center;
-    border-radius: 30px;
-    line-height: 2em;
-    background-color: #053575;
-    color: white;
-    font-size: 18px;
-    align-self: center;
-    margin: 50px 0 0 75px;
-    outline: none;
-    cursor: pointer;
+    padding: 40px;
 }
 
 .message {
     text-align: center;
     font-weight: bold;
+    color: #ffffff;
+}
+
+.student h1 {
+    font-size: 1.75em;
+    font-family: Imprima;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px;
 }
 
 #show_register {
     text-decoration: none;
+    color: white;
+    ;
 }
 
 #show_login {
-    text-decoration :none;
+    text-decoration: none;
+    color: white;
 }
+
+.form-logo {
+    width: 50%;
+    display: none;
+    margin-top: 10px !important;
+    margin: 0 auto;
+}
+
+.signup {
+    width: 90%;
+    margin: auto;
+}
+
+
+/*-----------------------*/
+
+
+/*Aside Style */
+
+.logo .img {
+    width: 100%;
+}
+
+.logo {
+    width: 50% !important;
+    margin: 20px auto;
+}
+
 .slogan {
     margin: auto !important;
     text-align: center;
+    color: white;
+    display: none;
 }
 
-aside {
-    background: linear-gradient(0deg, rgba(5, 53, 117, 0.4), rgba(5, 53, 117, 0.4)), url("https://res.cloudinary.com/jameschima/image/upload/v1569319310/photo-1565598621680-94ac0c22b148_lr4he5.jpg");
-    height: 100vh;
-    z-index: -2;
+.image img {
+    width: 100%;
+    object-fit: contain;
 }
+
+.image {
+    margin-top: 15%;
+    padding-top: auto;
+    width: 527.39px;
+    height: 400px;
+    float: right;
+}
+/* Style for Google Button */
+#googleBtn {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*-----------------------------------*/
+
+@media screen and (max-width: 768px) {
+    .student .inner-container {
+        width: 100%;
+        margin: auto;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+    aside {
+        display: none;
+    }
+    .form-logo {
+        display: block;
+    }
+    .student h1,
+    .teacher h1 {
+        font-size: 1em;
+        font-family: Imprima;
+        color: #ffffff;
+        text-align: center;
+        margin-top: -16px;
+        padding: 20px;
+    }
+    .student input[type=email],
+    .student input[type=password],
+    .student input[type=text],
+    .student select {
+        width: 100%;
+        border: 2px solid #DBD9D9;
+        border-radius: 20px;
+        line-height: 2.6em;
+        /* background: #A01B5C; */
+        background-color: #57489D;
+        outline: none;
+        color: white !important;
+        padding-left: 20px;
+    }
+    #signLink {
+        color: white;
+        font-size: 16px !important;
+    }
+}
+
+
+/* validation styles */
+
+.errorMsg {
+    color: #DE9D8F !important;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+button[type="button"]:disabled {
+    cursor: not-allowed;
+}
+
+
+/* .disabled {
+    cursor: not-allowed;
+} */
