@@ -54,6 +54,7 @@
                 <a href="teacher_classes.php">My Classes</a>
                 <a href="show_users.php">Search Users</a>
                 <a href="inbox.php">Inbox <span id="inboxResult"></span> </a>
+                <a href="teacher-profile.php">Profile</a>
                 <a href="logout.php">Logout</a>
                 <a href="">&nbsp</a>
 
