@@ -688,10 +688,11 @@ input[type="submit"] {
 #modal-content{
     padding: 15px;
     margin: 15% auto;
-    width: 20vw;
+    width: 35vw;
     height: 50vh;
     background-color: white;
     color: black;
+    overflow: auto;
 }
 
 
