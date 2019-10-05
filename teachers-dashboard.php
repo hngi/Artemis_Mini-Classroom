@@ -17,24 +17,8 @@ if($classCount > 1) {
     $addS = " ";
 }
 
-// Get all the students enrolled for a particular course
-function enrolees($class_id)
-{
-    global $con;
-    $query_select = 'SELECT * FROM enrolment WHERE class_id = '.$class_id.'';
-    $run_query_select = mysqli_query($con, $query_select);
-    $student = array();
-    while($result = mysqli_fetch_assoc($run_query_select)){
 
-        // select student details based on individually returned student_id
-        $query_student ='SELECT `firstname`, `lastname` FROM users WHERE user_id='.$result['student_id'].'';
-        $run_query_student = mysqli_query($con, $query_student);
-        
-        // Add each student to an array 
-        $student[] = mysqli_fetch_assoc($run_query_student);
-    }
-    return $student;
-}
+
 
 
 // get students enrolled in classes
@@ -169,25 +153,20 @@ if($totalEnrolments > 1) {
                               while($studentsRow = mysqli_fetch_assoc($studentsResult)) {
                                 $studentsCount++;
                               }
-
-                            //   Iterate through result of students who enroled and display list
-                             $enrolees = enrolees($recentRow['class_id']); 
-
+                            
+                            
+                            
                               echo '<div id="enroled-students-modal-window" style="display:none;">
-                                  <div id="modal-content">';
-                                  echo '<span onclick="closeModal()" class="close-modal">&times;</span>';
-                                  echo '<h4 class="modal-title">Student(s) who Enroled for "'.$recentRow['class_name'].'"</h4>';
-                                  echo'<ol class="my-students">';
-                                  foreach ($enrolees as $enrolee) {
-                                    echo '<li class="student">'.$enrolee['firstname'].' '.$enrolee['lastname'].'</li>';
-                                  };
-                                 echo '</ol> 
-                                 </div>
-                               </div>';                           
-                              
+                                        <div id="modal-content">
+                                            <span onclick="closeModal()" class="close-modal">&times;</span>
+                                            <ol class="my-students"></ol>
+                                        </div>
+                                    </div>
+                                    ';
+                                    
                             //    Display Clickable course item
                                echo ' 
-                                <tr onclick="myStudents()">
+                                <tr onclick="myStudents('.$recentRow['class_id'].')">
                                     <td>
                                         <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569705144/icons8-students-64_1_e0xmna.png" class="medium" alt="">
                                     </td>
