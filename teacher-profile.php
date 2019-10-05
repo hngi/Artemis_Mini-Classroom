@@ -6,6 +6,22 @@ $con = connect();
 if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
     header('Location:signin.php?role=student');
 }
+$firstnameNew = " ";
+$id = $_SESSION["userId"];
+            //Update records 
+            if(isset($_POST["form_submitted"])) {
+                
+                    $firstName = $_POST["firstName"];
+                    $lastName = $_POST["lastName"];
+                    $userId = $_SESSION["userId"];
+                    
+              
+                    $profileQuery = "UPDATE users SET firstname ='$firstName',lastname ='$lastName'   WHERE user_id='$userId'";
+                    $profileResult = mysqli_query($con, $profileQuery);  
+                    $profileUpdate = mysqli_affected_rows($con);                 
+                
+            }
+            
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,20 +64,17 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
                     if ($userCount > 0){
                         while ($userRow = mysqli_fetch_assoc($userResult)) {
                             $userName = $userRow["firstname"]." ".$userRow["lastname"];
+                            $firstName = $userRow["firstname"];
+                            $lastName = $userRow["lastname"];
                             $userEmail = $userRow["email"];
                             $userRole = $userRow["role"];
     
                         }
 
                     }
-                    
-                   
-                
-               
 
 
             ?>
-
 
             <ul class="top">
                 <li> <button type="button" class="btn btn-primary" id="Edit">Edit Profile</button></li>
@@ -75,8 +88,10 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
                     document.getElementById("display-profile").style.display =  'none';
                     document.getElementById("edit-profile").style.display =  'block';
                     editprofile.style.display =  'none';
-                })
+                });
+
             </script>
+           
             <form id ="display-profile">
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
@@ -98,37 +113,41 @@ if( (!isset($_SESSION["userId"])) && ($_SESSION["role"] != 'teacher') ) {
                 </div>
 
             </form>
-            <form id ="edit-profile" style="display:none">
+            <form id ="edit-profile" style="display:none" action="teacher-profile.php" method="post"  >
                 <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control-plaintext" id="userEmail" placeholder="<?php echo $userName;?>">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Firstname</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control-plaintext" id="firstName"  name= "firstName"  value="<?php echo $firstName;?>" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Lastname</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control-plaintext" id="lastName"  name= "lastName"  value="<?php echo $lastName;?>" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $userEmail;?>">
+                        <input type="text" readonly class="form-control-plaintext" id="dbEmail" value="<?php echo $userEmail;?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Role</label>
                     <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $userRole;?>">
+                        <input type="text" readonly class="form-control-plaintext" id="dbRole" value="<?php echo $userRole;?>">
                     </div>
                 </div>
-                <div class="boxed">
-                <h4>Information</h4>
                 
-                Lorem iiii ipsum dolor sit, amet consectetur adipisicing elit. Sed quo similique id explicabo at. Autem, rerum maxime blanditiis nobis ipsam quis iure non neque sapiente, iste quaerat fugiat repudiandae nesciunt. Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Sed quo similique id explicabo at. Autem, rerum maxime blanditiis nobis ipsam quis iure non neque sapiente, iste quaerat fugiat repudiandae nesciunt.
+               
+            
+             <input type="hidden" name="form_submitted" value="1" />
 
-            </div>
-             <button type="button" class="btn btn-primary">Save</button>
-             
-        </div>
+                <input type="submit"  id= "updateProfile" class="btn btn-primary" value="Save"  >
+        
 
             </form>
+            
             
     </section>
 
