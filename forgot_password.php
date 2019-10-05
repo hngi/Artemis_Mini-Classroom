@@ -78,7 +78,7 @@
               <img src="https://res.cloudinary.com/dcvf3txt9/image/upload/v1569353958/Artemis_logo_mkukw1.svg" class="form-logo"alt="team artemis logo">
             <button id="backBtn" onClick="javascript:history.go(-1)"><i class="fas fa-arrow-left">&nbsp;Back</i></button>
             <section class="login">
-                <h2 align="center"> FORGOT YOUR PASSWORD? </h2	
+                <h2 align="center"> FORGOT YOUR PASSWORD? </h2>	
                 <p><small>Kindly enter your email and we will send you a password reset link.</small></p><br>
                 
                 <!-- <button id="teacher_signin">Teacher?</button> -->
