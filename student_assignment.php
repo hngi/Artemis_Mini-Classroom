@@ -34,6 +34,11 @@ $con = connect();
 	  $query_1= 'SELECT * FROM assignment WHERE class_id = '.$row["class_id"].'';
 	  $result_1 = mysqli_query($con,$query_1);
 	  $count_1 = mysqli_affected_rows($con);
+
+	  //get the name of the class the student has enrolled for
+	  $query_2= 'SELECT * FROM classes WHERE class_id= '.$row_1["class_id"].'';
+	  $result_2= mysqli_query($con,$query_2);
+      $row_2 = mysqli_fetch_assoc($result_2);
 	  
 	?>
 <div id="main">
@@ -42,17 +47,13 @@ $con = connect();
          
             </div>
             <div option-nav>
-                <h4>You have <?php echo $count_1; ?> Assignment(s)</h4>
+                <!-- <h4>You have <?php echo $count_1; ?> Assignment(s)</h4> -->
             </div>
         
             <?php
                 if($count > 0) {
-                    while($row_1 = mysqli_fetch_assoc($result_1)); {
+                    while($row = mysqli_fetch_assoc($result)); {
 
-                    	    //get the name of the class the student has enrolled for
-                    	    $query_2= 'SELECT * FROM classes WHERE class_id= '.$row_1["class_id"].'';
-                    	    $result_2= mysqli_query($con,$query_2);
-                    	    $row_2 = mysqli_fetch_assoc($result_2);
 
                     	    if ($count_1 > 0) {
                     	    	echo '
