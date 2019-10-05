@@ -80,7 +80,7 @@
         <main class="logon">
               <img src="https://res.cloudinary.com/dcvf3txt9/image/upload/v1569353958/Artemis_logo_mkukw1.svg" class="form-logo"alt="team artemis logo">
             <section class="login">
-                <h1> RESET YOUR PASSWORD</h1>
+                <h2 align="center"> RESET YOUR PASSWORD</h2><br>
                 
                 <!-- <button id="teacher_signin">Teacher?</button> -->
                 <form method="post">
