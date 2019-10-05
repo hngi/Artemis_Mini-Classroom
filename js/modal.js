@@ -15,7 +15,6 @@ function myStudents(class_id){
       xmlhttp.onreadystatechange = function() {
         console.log(this.status)
           if (this.readyState == 4 && this.status == 200) {
-            // console.log(this.responseXML)
             let response = this.response
             enroledStudents(response, modal)
           
@@ -45,6 +44,5 @@ function enroledStudents(response, modal){
 
 function closeModal(){
   let modal = document.querySelector('#enroled-students-modal-window')
-  // alert('Close clicked')
   modal.style.display='none'
 }
