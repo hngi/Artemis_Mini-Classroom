@@ -78,8 +78,8 @@
               <img src="https://res.cloudinary.com/dcvf3txt9/image/upload/v1569353958/Artemis_logo_mkukw1.svg" class="form-logo"alt="team artemis logo">
             <button id="backBtn" onClick="javascript:history.go(-1)"><i class="fas fa-arrow-left">&nbsp;Back</i></button>
             <section class="login">
-                <h1> FORGOT YOUR PASSWORD? </h1>
-                <p>Enter your registration Email Address and we will send you a password reset link.</p><br>
+                <h2 align="center"> FORGOT YOUR PASSWORD? </h2	
+                <p><small>Kindly enter your email and we will send you a password reset link.</small></p><br>
                 
                 <!-- <button id="teacher_signin">Teacher?</button> -->
                 <form method="post">
@@ -93,11 +93,11 @@
                     
                     <input type="hidden" name="role" id="role" value="<?php echo $role; ?>" />
                     
-                    <br><br>
+                    <br>
 
                     <button type="button" id="signinSubmitBtn" onclick="callForgotPassword()">
                         <img src="images/loading.gif" width="20px" height="20px" id="signinLoading" style="display: none;">
-                        Submit
+                        Send
                     </button>
                     <br>
                 </form>

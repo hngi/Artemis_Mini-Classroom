@@ -118,6 +118,7 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
                     
                     <input type="hidden" name="role" id="role" value="<?php echo $role; ?>" />
                     
+                    <a href="forgot_password.php" style="float:right;">Forgot Password?</a>
                     <?php
                     if ($role == "teacher"){
                         echo "<a href='signin.php?role=student' id='signLink'><b><h4>Student Sign in</h4></b></a>";
@@ -128,7 +129,6 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
 
                     ?>
 
-                    <a href="forgot_password.php" style="float:right; display:none">Forgot Password?</a>
                     <br><br>
                     <!--                input 1-->
                     <!-- <input type="submit" value="Login"> -->
