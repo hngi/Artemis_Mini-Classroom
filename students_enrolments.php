@@ -17,6 +17,29 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
     $enrolResult =  mysqli_query($con, $enrolQuery) or die(mysqli_error($con));
     
 }
+
+
+function students_enroled($class_id)
+{
+    global $con;
+    $query_enrolments = "SELECT * FROM enrolment WHERE class_id ='$class_id'";
+    $run_query = mysqli_query($con, $query_enrolments);
+
+    $total_enrolments = mysqli_num_rows($run_query);
+    if($total_enrolments > 1){
+        return "<p class='total-enrolment'>$total_enrolments students also enroled for this course</p>";
+    }elseif($total_enrolments === 1){
+        return "<p class='total-enrolment'>$total_enrolments other student also enroled for this course</p>";
+    }else{
+        return "<p class='total-enrolment'>Be the first to enrol for this course</p>";
+    }
+}
+
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,13 +139,14 @@ if(isset($_GET["enroll"]) && isset($_GET["classId"])) {
                             echo '
                             </div>
                             <div class="description">
-                            <a href="student_access_class.php?classId='.$row["class_id"].'">'.$className.'</a>
+                            <a href="#">'.$className.'</a>
                                 <hr>
                                 
                                 <p id="date_created">Date Enrolled : '.$row["date_enrolled"].'</p>
                                 
-                                <p id="descText"> '.$classDesc.'
-                                </p>
+                                <p id="descText"> '.$classDesc.'</p>
+                                <p>'.students_enroled($row["class_id"]).'</p>
+                                
                             </div>
                             <div class="space">
             
