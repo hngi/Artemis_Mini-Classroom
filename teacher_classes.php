@@ -78,6 +78,9 @@ $con = connect();
                             <button><a href="teacher_add_item.php?class_id='.$row["class_id"].'"> + Add Item</a></button>
                             <p id="participants">'.$itemsCount.' class items</p>
                         </div>
+                        <div class="enroll_btn">
+                            <button><a href="assignment_create.php?class_id='.$row["class_id"].'"> + Add Assignment</a></button>
+                        </div>
                     </div>';
                     }
                     
