@@ -1,4 +1,3 @@
-<?php  include('teachersconn.php'); ?>
 
 <!DOCTYPE html>
 <html>
