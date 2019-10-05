@@ -29,9 +29,6 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
 
-    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
-    <meta name="google-signin-client_id" content="410097199795-tpg9mbtm25o9g91s6l838ttmdst5ds13.apps.googleusercontent.com">
-
 	<script>
         function callSignin() {
                 
@@ -85,6 +82,60 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
 </head>
 
 <body>
+    <script>
+    function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+    console.log('statusChangeCallback');
+    console.log(response);                   // The current login status of the person.
+    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+      testAPI();
+      window.location = "students-dashboard.php"  
+    } else {                                 // Not logged into your webpage or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
+    }
+  }
+
+  function checkLoginState() {               // Called when a person is finished with the Login Button.
+    FB.getLoginStatus(function(response) {   // See the onlogin handler
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '390438761637681',
+      cookie     : true,                     // Enable cookies to allow the server to access the session.
+      xfbml      : true,                     // Parse social plugins on this webpage.
+      version    : 'v4.0'           // Use this Graph API version for this call.
+    });
+
+
+    FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+      statusChangeCallback(response);        // Returns the login status.
+    });
+  };
+
+  
+  (function(d, s, id) {                      // Load the SDK asynchronously
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+ 
+  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+    </script>
+    
+
     <div class="container student">
         <div class ="inner-container">
         <main class="logon">
@@ -140,7 +191,7 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
                         <img src="images/loading.gif" width="20px" height="20px" id="signinLoading" style="display: none;">
                         Login
                     </button> <br>
-                    <div id="googleBtn" class="g-signin2"  data-longtitle="true"></div>
+                    <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" onlogin="checkLoginState()" id = "googleBtn"></div>
                     <br>
                     <p class="message"> Don't have an account? <a href="#" id="show_register">sign up here</a></p>
                 </form>
@@ -203,7 +254,6 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
                 </form>
             </section>
 
-
         </main>
         
         <aside >
@@ -226,8 +276,6 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
 
         
     </div>
-
-
 
     <!--  -->
     <!--  -->
@@ -259,10 +307,8 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
 
         });
     </script>
-
 <script src="js/signup_validation.js"></script> 
 <script src="js/signin_validation.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 
 </html>
