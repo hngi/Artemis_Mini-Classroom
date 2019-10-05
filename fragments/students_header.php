@@ -31,6 +31,7 @@
                 <a href="students-dashboard.php">Dashboard</a>
                 <a href="students_enrolments.php">My Classes</a>
                 <a href="students_class_list.php">Class List</a>
+                <a href="student_assignment.php">Assignment</a>
                 <a href="logout.php">Logout</a>
                 <a href="">&nbsp</a>
                 
