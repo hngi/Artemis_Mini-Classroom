@@ -30,6 +30,7 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
     <link href="https://fonts.googleapis.com/css?family=Imprima&display=swap" rel="stylesheet">
 
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <meta name="google-signin-client_id" content="410097199795-tpg9mbtm25o9g91s6l838ttmdst5ds13.apps.googleusercontent.com">
 
 	<script>
         function callSignin() {
@@ -138,7 +139,8 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
                     <button type="button" id="signinSubmitBtn" disabled onclick="callSignin()">
                         <img src="images/loading.gif" width="20px" height="20px" id="signinLoading" style="display: none;">
                         Login
-                    </button>
+                    </button> <br>
+                    <div id="googleBtn" class="g-signin2"  data-longtitle="true"></div>
                     <br>
                     <p class="message"> Don't have an account? <a href="#" id="show_register">sign up here</a></p>
                 </form>
@@ -260,6 +262,7 @@ if( (isset($_SESSION["userId"])) && ($_SESSION["role"] != 'student') ) {
 
 <script src="js/signup_validation.js"></script> 
 <script src="js/signin_validation.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 
 </html>

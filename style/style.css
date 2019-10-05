@@ -198,7 +198,7 @@ button:not(#backBtn) {
     outline: none;
     cursor: pointer;
     display: block;
-    margin: auto;
+    margin: 0 auto;
 }
 
 ::placeholder {
@@ -286,6 +286,15 @@ button:not(#backBtn) {
     width: 527.39px;
     height: 400px;
     float: right;
+}
+/* Style for Google Button */
+#googleBtn {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
 

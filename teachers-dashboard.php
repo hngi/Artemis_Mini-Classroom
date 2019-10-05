@@ -17,6 +17,10 @@ if($classCount > 1) {
     $addS = " ";
 }
 
+
+
+
+
 // get students enrolled in classes
 $totalEnrolments = 0;
 if($classCount > 0) {
@@ -66,8 +70,12 @@ if($totalEnrolments > 1) {
 
 <body>
     
+
+
     <?php include('fragments/teachers_header.php'); ?>
     
+    
+
     <div class="wrapper">
         <div class="db-box">
             <div class="class-header">
@@ -77,6 +85,7 @@ if($totalEnrolments > 1) {
                 </div>
             </div>
             <div class="content">
+            
                 <table>
                     <!--<tr>-->
                     <!--    <td colspan="3">Your Recent Classes</td>-->
@@ -144,13 +153,24 @@ if($totalEnrolments > 1) {
                               while($studentsRow = mysqli_fetch_assoc($studentsResult)) {
                                 $studentsCount++;
                               }
-                              
+                            
+                            
+                            
+                              echo '<div id="enroled-students-modal-window" style="display:none;">
+                                        <div id="modal-content">
+                                            <span onclick="closeModal()" class="close-modal">&times;</span>
+                                            <ol class="my-students"></ol>
+                                        </div>
+                                    </div>
+                                    ';
+                                    
+                            //    Display Clickable course item
                                echo ' 
-                                <tr>
+                                <tr onclick="myStudents('.$recentRow['class_id'].')">
                                     <td>
                                         <img src="https://res.cloudinary.com/oluwamayowaf/image/upload/v1569705144/icons8-students-64_1_e0xmna.png" class="medium" alt="">
                                     </td>
-                                    <td>
+                                    <td id="my_course">
                                         <h4 style="padding: 0px 3px">'.$recentRow["class_name"].'</h4>
                                     </td>
                                     <td style="padding-left:3px">
@@ -158,13 +178,18 @@ if($totalEnrolments > 1) {
                                     </td>
                                 </tr>';
                                 
+
+
+
+                                
+                                
+                                
+                                
                             }
                         } else {
                             // classes do not exist
                         }
-                    ?>
-                    
-                    
+                        ?>
                     
                 </table>
             </div>
@@ -222,11 +247,16 @@ if($totalEnrolments > 1) {
             </div>
         </div>
 
+
+        
+
+    
+
         <footer>
-            
+ 
         </footer>
         <script src="js/header.js"></script>
-
+        <script src="js/modal.js"></script>
 
 </body>
 
