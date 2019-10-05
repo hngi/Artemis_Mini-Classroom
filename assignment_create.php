@@ -1,4 +1,5 @@
 <?php
+ session_start();
  include("functions/connection.php");
  $con = connect();
 
@@ -22,7 +23,7 @@ if(isset($_GET["class_id"])) {
     	if($assignmentName == "" || $assignmentDesc == "") {
     	    $response = '<div class="errorResponse">Please enter valid data.</div>';
     	} else {
-    	     $query = "INSERT into assignment(assignment_title, assignment_desc, date_created, teacher_id, class_id) VALUES ('".$assignmentName."', '".$assignmentDesc."',now(),".$_SESSION['user_id']."','".$classId."')"; 
+    	     $query = "INSERT into assignment(assignment_title, assignment_desc, date_created, teacher_id, class_id) VALUES ('$assignmentName', '$assignmentDesc',now(),".$_SESSION['user_Id']."','$classId')"; 
     	     $result = mysqli_query($con, $query) or die(mysqli_error($con));
     	     $count = mysqli_affected_rows($con);
     	     if($count > 0) {
