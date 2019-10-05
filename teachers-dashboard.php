@@ -30,10 +30,8 @@ function enrolees($class_id)
         $query_student ='SELECT `firstname`, `lastname` FROM users WHERE user_id='.$result['student_id'].'';
         $run_query_student = mysqli_query($con, $query_student);
         
-        // Display each student 
+        // Add each student to an array 
         $student[] = mysqli_fetch_assoc($run_query_student);
-     
-       // return '<p>'.$student['firstname'].' '.$student['lastname'].'</p>';
     }
     return $student;
 }
@@ -172,6 +170,7 @@ if($totalEnrolments > 1) {
                                 $studentsCount++;
                               }
 
+                            //   Iterate through result of students who enroled and display list
                              $enrolees = enrolees($recentRow['class_id']); 
 
                               echo '<div id="enroled-students-modal-window" style="display:none;">
@@ -186,6 +185,7 @@ if($totalEnrolments > 1) {
                                  </div>
                                </div>';                           
                               
+                            //    Display Clickable course item
                                echo ' 
                                 <tr onclick="myStudents()">
                                     <td>
