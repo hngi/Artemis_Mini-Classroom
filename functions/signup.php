@@ -79,9 +79,14 @@ session_start();
 			$header .= "Content-type: text/html\r\n";
 			mail($to,$subject,$message,$header);
 			
-			echo '<script>
-                window.location.href = "https://mini-classroom.000webhostapp.com/signin.php?role='.$role.'";
+// 			echo '<script>
+//                 window.location.href = "https://mini-classroom.000webhostapp.com/signin.php?role='.$role.'";
+//             </script>';
+            
+            echo '<script>
+                window.location.href = "http://artemis-mini-classroom.evapeaceful.com/signin.php?role='.$role.'";
             </script>';
+            
     	    
     	    // redirect to dashbaord
     	   // if($role == "teacher") {
