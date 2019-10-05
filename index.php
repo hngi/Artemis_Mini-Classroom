@@ -51,34 +51,24 @@
             </div>
         </div>
     </div>
-
-
+              <br></br>
+              <br></br>
+   <div class="footer">
+           <p> Share through </p>
+          <!-- AddToAny BEGIN -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://mini-classroom.000webhostapp.com">
+           <a class="a2a_button_facebook"></a>
+           <a class="a2a_button_twitter"></a>
+           <a class="a2a_button_pinterest"></a>
+           <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+      </div>
+ <script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END 
+  <!-- Copyright -->
+                   <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                            <a href="https://mini-classroom.000webhostapp.com"> HNG Team Artemis Mini-Classroom</a>
+                   </div>
+  <!-- Copyright -->
+   </div>
 </body>
-
-<!-- Footer -->
-<footer class="page-footer font-small grey">
-  <h3>Share through </h3>
-      <!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://mini-classroom.000webhostapp.com">
-<a class="a2a_button_facebook"></a>
-<a class="a2a_button_twitter"></a>
-<a class="a2a_button_email"></a>
-<a class="a2a_button_pinterest"></a>
-<a class="a2a_button_linkedin"></a>
-<a class="a2a_button_wordpress"></a>
-<a class="a2a_button_skype"></a>
-<a class="a2a_button_google_bookmarks"></a>
-<a class="a2a_button_blogger"></a>
-<a class="a2a_button_reddit"></a>
-<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-</div>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END -->
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://mini-classroom.000webhostapp.com"> HNG Team Artemis Mini-Classroom</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
 </html>
