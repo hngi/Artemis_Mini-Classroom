@@ -30,7 +30,7 @@
 <div id="main">
         <section>
             <div class="dropdown">
-                <a href="assignment_create.php" style="text-decoration:none;"><button id="dropbutton" class="dropbtn">+ New Assignment</button></a>
+                
             </div>
             <div option-nav>
                 <h4>You have given <?php echo $count; ?> Assignment(s)</h4>
