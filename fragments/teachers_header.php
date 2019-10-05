@@ -28,6 +28,7 @@
             <div class="topnav" id="myTopnav">
                 <a href="teachers-dashboard.php">Dashboard</a>
                 <a href="teacher_classes.php">My Classes</a>
+                <a href="assignment.php">Assignment</a>
                 <a href="logout.php">Logout</a>
                 <a href="">&nbsp</a>
 
