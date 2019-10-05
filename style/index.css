@@ -79,7 +79,15 @@ nav ul li a:hover {
     padding: 6px 20px;
     text-decoration: none;
 }
+    .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #EE4698 !important;
+    color: white;
 
+}
 
 }
 
